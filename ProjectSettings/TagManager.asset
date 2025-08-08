@@ -2,13 +2,14 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - blocks
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
@@ -41,3 +42,23 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: New Layer 2
+    uniqueID: 1438445097
+    locked: 0
+  - name: New Layer 3
+    uniqueID: 832927687
+    locked: 0
+  - name: New Layer 4
+    uniqueID: 146121063
+    locked: 0
+  - name: New Layer 5
+    uniqueID: 2319850673
+    locked: 0
+  - name: New Layer 6
+    uniqueID: 230041751
+    locked: 0
+  - name: Player
+    uniqueID: 758261245
+    locked: 0
+  m_RenderingLayers:
+  - Default
