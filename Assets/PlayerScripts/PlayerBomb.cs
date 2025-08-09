@@ -64,12 +64,11 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions
         // Si estamos marcando que seguimos sobre la bomba, revisamos si ya salimos de la casilla (comprobación por grid)
         if (stillOnLastBomb && lastBombCollider != null)
         {
-            Vector2Int playerGrid = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
-            Vector2Int bombGrid = new Vector2Int(Mathf.RoundToInt(lastBombCollider.transform.position.x), Mathf.RoundToInt(lastBombCollider.transform.position.y));
+            float distance = Vector2.Distance(transform.position, lastBombCollider.transform.position);
+            float threshold = 0.6f; // Ajusta según el tamaño de la casilla (0.5 o más)
 
-            if (playerGrid != bombGrid)
+            if (distance > threshold)
             {
-                // Re-habilitar la colisión física
                 Physics2D.IgnoreCollision(playerCollider, lastBombCollider, false);
                 stillOnLastBomb = false;
                 lastBombCollider = null;
