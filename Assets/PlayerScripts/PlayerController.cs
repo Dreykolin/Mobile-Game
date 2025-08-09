@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,22 +9,22 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
     private Vector3 targetPosition;
     public float moveSpeed = 5f;
 
+    // Referencia al PlayerBomb para saber cuál bomba ignorar
+    private PlayerBomb playerBomb;
+
     void Awake()
     {
         controls = new PlayerControls();
         controls.player.SetCallbacks(this);
         targetPosition = transform.position;
+
+        playerBomb = GetComponent<PlayerBomb>();
+        if (playerBomb == null)
+            Debug.LogWarning("PlayerInputExample: No se encontró PlayerBomb en el mismo GameObject.");
     }
 
-    void OnEnable()
-    {
-        controls.player.Enable();
-    }
-
-    void OnDisable()
-    {
-        controls.player.Disable();
-    }
+    void OnEnable() => controls.player.Enable();
+    void OnDisable() => controls.player.Disable();
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -35,7 +34,7 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
 
             if (moveInput != Vector2.zero)
             {
-                // Restringir movimiento solo a 4 direcciones (no diagonales)
+                // Restringir a 4 direcciones
                 if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y))
                 {
                     moveInput.y = 0;
@@ -52,19 +51,53 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
 
                 Vector2 boxSize = new Vector2(0.9f, 0.9f);
 
-                // Ajusta la máscara a la que estés usando para los bloques
-                int layerMask = LayerMask.GetMask("Default");
+                // Obtenemos todos los colliders en esa casilla (sin filtrar por layer para que no falle si tu bomb está en otra layer)
+                Collider2D[] hits = Physics2D.OverlapBoxAll((Vector2)newPos, boxSize, 0f);
 
-                Collider2D hit = Physics2D.OverlapBox(newPos, boxSize, 0f, layerMask);
+                bool blocked = false;
 
-                if (hit == null || !hit.CompareTag("blocks"))
+                if (hits != null && hits.Length > 0)
+                {
+                    foreach (Collider2D hit in hits)
+                    {
+                        if (hit == null) continue;
+
+                        // Bloque real: muros o bloques destructibles (asegúrate de tener estas tags)
+                        if (hit.CompareTag("blocks") || hit.CompareTag("destructible"))
+                        {
+                            blocked = true;
+                            break;
+                        }
+
+                        // Si es bomba, permitir solo si es la última bomba propia
+                        if (hit.CompareTag("Bomb"))
+                        {
+                            bool esMiBomba = (playerBomb != null && playerBomb.EsUltimaBomba(hit));
+                            if (esMiBomba)
+                            {
+                                // ignorar este collider y seguir chequeando otros colliders
+                                continue;
+                            }
+                            else
+                            {
+                                blocked = true;
+                                break;
+                            }
+                        }
+
+                        // Otros colliders (personajes, items): si no quieres que bloqueen, ignóralos.
+                        // Si quieres que otros tipos bloqueen, añade sus tags aquí.
+                    }
+                }
+
+                if (!blocked)
                 {
                     targetPosition = newPos;
                     isMoving = true;
                 }
                 else
                 {
-                    Debug.Log("Movimiento bloqueado por: " + hit.name);
+                    Debug.Log("Movimiento bloqueado (por collider en la casilla).");
                 }
             }
         }
@@ -94,7 +127,6 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
             }
         }
     }
-
 
 
 
