@@ -57,7 +57,7 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
 
                 Collider2D hit = Physics2D.OverlapBox(newPos, boxSize, 0f, layerMask);
 
-                if (hit == null || !hit.CompareTag("blocks"))
+                if (hit == null || (!hit.CompareTag("blocks") && !hit.CompareTag("destructible")))
                 {
                     targetPosition = newPos;
                     isMoving = true;
