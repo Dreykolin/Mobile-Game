@@ -19,10 +19,10 @@ public class Bomb : MonoBehaviour
         // Encontrar los Tilemaps por sus nombres y obtener los componentes
         destructibleTilemap = GameObject.Find("Tilemap_destructible").GetComponent<Tilemap>();
         wallTilemap = GameObject.Find("Tilemap_blocks").GetComponent<Tilemap>(); // Asegúrate de que el nombre coincide
-        Invoke(nameof(Explode), fuseTime);
+        Invoke(nameof(Explode),     fuseTime);
     }
 
-    void Explode()
+    public void Explode()
     {
         if (exploded) return;
         exploded = true;
