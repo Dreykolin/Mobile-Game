@@ -138,14 +138,43 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
     {
         if (!isMoving)
         {
-            Vector3 direction = Vector3.left;  // Izquierda
+            Vector3 direction = Vector3.left;
             Vector3 newPos = targetPosition + direction;
 
             Vector2 boxSize = new Vector2(0.9f, 0.9f);
-            int layerMask = LayerMask.GetMask("Default");
-            Collider2D hit = Physics2D.OverlapBox(newPos, boxSize, 0f, layerMask);
 
-            if (hit == null || !hit.CompareTag("blocks"))
+            // Obtenemos todos los colliders en la posición destino
+            Collider2D[] hits = Physics2D.OverlapBoxAll((Vector2)newPos, boxSize, 0f);
+
+            bool blocked = false;
+
+            if (hits != null && hits.Length > 0)
+            {
+                foreach (Collider2D hit in hits)
+                {
+                    if (hit == null) continue;
+
+                    if (hit.CompareTag("blocks") || hit.CompareTag("destructible"))
+                    {
+                        blocked = true;
+                        break;
+                    }
+
+                    if (hit.CompareTag("Bomb"))
+                    {
+                        bool esMiBomba = (playerBomb != null && playerBomb.EsUltimaBomba(hit));
+                        if (esMiBomba)
+                            continue;
+                        else
+                        {
+                            blocked = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (!blocked)
             {
                 targetPosition = newPos;
                 isMoving = true;
@@ -157,14 +186,42 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
     {
         if (!isMoving)
         {
-            Vector3 direction = Vector3.right;  // Derecha
+            Vector3 direction = Vector3.right;
             Vector3 newPos = targetPosition + direction;
 
             Vector2 boxSize = new Vector2(0.9f, 0.9f);
-            int layerMask = LayerMask.GetMask("Default");
-            Collider2D hit = Physics2D.OverlapBox(newPos, boxSize, 0f, layerMask);
 
-            if (hit == null || !hit.CompareTag("blocks"))
+            Collider2D[] hits = Physics2D.OverlapBoxAll((Vector2)newPos, boxSize, 0f);
+
+            bool blocked = false;
+
+            if (hits != null && hits.Length > 0)
+            {
+                foreach (Collider2D hit in hits)
+                {
+                    if (hit == null) continue;
+
+                    if (hit.CompareTag("blocks") || hit.CompareTag("destructible"))
+                    {
+                        blocked = true;
+                        break;
+                    }
+
+                    if (hit.CompareTag("Bomb"))
+                    {
+                        bool esMiBomba = (playerBomb != null && playerBomb.EsUltimaBomba(hit));
+                        if (esMiBomba)
+                            continue;
+                        else
+                        {
+                            blocked = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (!blocked)
             {
                 targetPosition = newPos;
                 isMoving = true;
@@ -176,14 +233,42 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
     {
         if (!isMoving)
         {
-            Vector3 direction = Vector3.up;  // Arriba
+            Vector3 direction = Vector3.up;
             Vector3 newPos = targetPosition + direction;
 
             Vector2 boxSize = new Vector2(0.9f, 0.9f);
-            int layerMask = LayerMask.GetMask("Default");
-            Collider2D hit = Physics2D.OverlapBox(newPos, boxSize, 0f, layerMask);
 
-            if (hit == null || !hit.CompareTag("blocks"))
+            Collider2D[] hits = Physics2D.OverlapBoxAll((Vector2)newPos, boxSize, 0f);
+
+            bool blocked = false;
+
+            if (hits != null && hits.Length > 0)
+            {
+                foreach (Collider2D hit in hits)
+                {
+                    if (hit == null) continue;
+
+                    if (hit.CompareTag("blocks") || hit.CompareTag("destructible"))
+                    {
+                        blocked = true;
+                        break;
+                    }
+
+                    if (hit.CompareTag("Bomb"))
+                    {
+                        bool esMiBomba = (playerBomb != null && playerBomb.EsUltimaBomba(hit));
+                        if (esMiBomba)
+                            continue;
+                        else
+                        {
+                            blocked = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (!blocked)
             {
                 targetPosition = newPos;
                 isMoving = true;
@@ -195,14 +280,42 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
     {
         if (!isMoving)
         {
-            Vector3 direction = Vector3.down;  // Abajo
+            Vector3 direction = Vector3.down;
             Vector3 newPos = targetPosition + direction;
 
             Vector2 boxSize = new Vector2(0.9f, 0.9f);
-            int layerMask = LayerMask.GetMask("Default");
-            Collider2D hit = Physics2D.OverlapBox(newPos, boxSize, 0f, layerMask);
 
-            if (hit == null || !hit.CompareTag("blocks"))
+            Collider2D[] hits = Physics2D.OverlapBoxAll((Vector2)newPos, boxSize, 0f);
+
+            bool blocked = false;
+
+            if (hits != null && hits.Length > 0)
+            {
+                foreach (Collider2D hit in hits)
+                {
+                    if (hit == null) continue;
+
+                    if (hit.CompareTag("blocks") || hit.CompareTag("destructible"))
+                    {
+                        blocked = true;
+                        break;
+                    }
+
+                    if (hit.CompareTag("Bomb"))
+                    {
+                        bool esMiBomba = (playerBomb != null && playerBomb.EsUltimaBomba(hit));
+                        if (esMiBomba)
+                            continue;
+                        else
+                        {
+                            blocked = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (!blocked)
             {
                 targetPosition = newPos;
                 isMoving = true;
@@ -210,9 +323,11 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
         }
     }
 
+
     public void StopMove()
     {
-        // Puedes dejarlo vacío o agregar lógica para detener animaciones o resetear estados.
+        moveInput = Vector2.zero;
+        // Aquí puedes agregar más lógica si quieres detener animaciones o estados.
     }
 
 
@@ -221,5 +336,10 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(targetPosition, new Vector3(0.9f, 0.9f, 0));
+    }
+
+    public bool IsMoving()
+    {
+        return isMoving;
     }
 }

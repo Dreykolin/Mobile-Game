@@ -3,23 +3,42 @@ using UnityEngine.Tilemaps;
 
 public class Bomb : MonoBehaviour
 {
-    public GameObject explosionPrefab;
+    public GameObject explosionCenterPrefab;
+
+    public GameObject explosionUpPrefab;
+    public GameObject explosionDownPrefab;
+    public GameObject explosionLeftPrefab;
+    public GameObject explosionRightPrefab;
+
+    public GameObject explosionUpFinalPrefab;
+    public GameObject explosionDownFinalPrefab;
+    public GameObject explosionLeftFinalPrefab;
+    public GameObject explosionRightFinalPrefab;
+
     public float fuseTime = 2f;
     public int explosionRange = 3;
 
     private bool exploded = false;
 
-    // Referencia al Tilemap de bloques destructibles
     private Tilemap destructibleTilemap;
-    // Referencia al Tilemap de muros indestructibles
     private Tilemap wallTilemap;
+
+    // Referencia al dueño de la bomba
+    private IBombOwner owner;
+
 
     void Start()
     {
-        // Encontrar los Tilemaps por sus nombres y obtener los componentes
         destructibleTilemap = GameObject.Find("Tilemap_destructible").GetComponent<Tilemap>();
-        wallTilemap = GameObject.Find("Tilemap_blocks").GetComponent<Tilemap>(); // Asegúrate de que el nombre coincide
-        Invoke(nameof(Explode),     fuseTime);
+        wallTilemap = GameObject.Find("Tilemap_blocks").GetComponent<Tilemap>();
+
+        Invoke(nameof(Explode), fuseTime);
+    }
+
+
+    public void SetOwner(IBombOwner ownerScript)
+    {
+        owner = ownerScript;
     }
 
     public void Explode()
@@ -28,45 +47,42 @@ public class Bomb : MonoBehaviour
         exploded = true;
 
         Vector3 pos = transform.position;
+        Instantiate(explosionCenterPrefab, pos, Quaternion.identity);
 
-        // Instancia la explosión central
-        Instantiate(explosionPrefab, pos, Quaternion.identity);
+        PropagateFire(Vector3.up, pos, explosionUpPrefab, explosionUpFinalPrefab);
+        PropagateFire(Vector3.down, pos, explosionDownPrefab, explosionDownFinalPrefab);
+        PropagateFire(Vector3.left, pos, explosionLeftPrefab, explosionLeftFinalPrefab);
+        PropagateFire(Vector3.right, pos, explosionRightPrefab, explosionRightFinalPrefab);
 
-        // Propaga el fuego en las 4 direcciones
-        PropagateFire(Vector3.up, pos);
-        PropagateFire(Vector3.down, pos);
-        PropagateFire(Vector3.left, pos);
-        PropagateFire(Vector3.right, pos);
+        // Avisar al dueño (cualquier script que implemente IBombOwner)
+        owner?.NotifyBombDestroyed(GetComponent<Collider2D>());
 
         Destroy(gameObject);
     }
 
-    void PropagateFire(Vector3 direction, Vector3 startPos)
+    void PropagateFire(Vector3 direction, Vector3 startPos, GameObject explosionPrefab, GameObject explosionFinalPrefab)
     {
         for (int i = 1; i <= explosionRange; i++)
         {
             Vector3 newPos = startPos + direction * i;
             Vector3Int cellPosition = destructibleTilemap.WorldToCell(newPos);
 
-            // 1. Verificar si la explosión choca con un muro indestructible
             if (wallTilemap.HasTile(cellPosition))
             {
-                // Si hay un muro, se detiene la propagación en esta dirección
-                break;
+                break; // muro indestructible
             }
-            // 2. Si no hay muro, verificar si choca con un bloque destructible
             else if (destructibleTilemap.HasTile(cellPosition))
             {
-                // Si hay un bloque destructible, lo destruye, pone la explosión y se detiene
                 destructibleTilemap.SetTile(cellPosition, null);
-                Instantiate(explosionPrefab, newPos, Quaternion.identity);
-                Debug.Log("Tile destruido en: " + cellPosition);
-                break; // El fuego no se propaga más allá del bloque destruido
+                Instantiate(explosionFinalPrefab, destructibleTilemap.CellToWorld(cellPosition) + new Vector3(0.5f, 0.5f, 0), Quaternion.identity);
+                break;
             }
-            // 3. Si no hay muro ni bloque, simplemente continúa la propagación
             else
             {
-                Instantiate(explosionPrefab, newPos, Quaternion.identity);
+                if (i == explosionRange)
+                    Instantiate(explosionFinalPrefab, destructibleTilemap.CellToWorld(cellPosition) + new Vector3(0.5f, 0.5f, 0), Quaternion.identity);
+                else
+                    Instantiate(explosionPrefab, destructibleTilemap.CellToWorld(cellPosition) + new Vector3(0.5f, 0.5f, 0), Quaternion.identity);
             }
         }
     }

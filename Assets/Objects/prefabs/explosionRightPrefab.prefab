@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5750007977233102056}
   - component: {fileID: 6800339877733807160}
   m_Layer: 0
-  m_Name: explotion
+  m_Name: explosionRightPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 758261245
   m_SortingLayer: 6
   m_SortingOrder: 11
-  m_Sprite: {fileID: 583887238, guid: 26c782820d50feb40a6e24e95fe6a0d8, type: 3}
+  m_Sprite: {fileID: -1642641531, guid: 26c782820d50feb40a6e24e95fe6a0d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -137,7 +137,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.004152, y: -0.0013839602}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -147,7 +147,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.97508776, y: 0.975088}
   m_EdgeRadius: 0
 --- !u!50 &6800339877733807160
 Rigidbody2D:

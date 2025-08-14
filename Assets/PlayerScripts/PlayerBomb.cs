@@ -1,27 +1,34 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions
+public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwner
 {
     public GameObject bombPrefab;
-    public float bombCooldown = 2f;
-    private float nextBombTime = 0f;
+    public int maxBombs = 1; // cantidad m√°xima de bombas que puede poner
+    private int bombsAvailable;
 
     private PlayerControls controls;
 
-    // Referencia al collider de la ˙ltima bomba puesta por este jugador
     private Collider2D lastBombCollider;
     private bool stillOnLastBomb = false;
 
     private Collider2D playerCollider;
+    private PlayerInputExample playerInput;
 
     void Awake()
     {
+        playerInput = GetComponent<PlayerInputExample>();
+        if (playerInput == null)
+            Debug.LogWarning("No se encontr√≥ PlayerInputExample en el mismo GameObject");
+
         controls = new PlayerControls();
         controls.player.SetCallbacks(this);
+
         playerCollider = GetComponent<Collider2D>();
         if (playerCollider == null)
-            Debug.LogWarning("PlayerBomb: No se encontrÛ Collider2D en el jugador.");
+            Debug.LogWarning("PlayerBomb: No se encontr√≥ Collider2D en el jugador.");
+
+        bombsAvailable = maxBombs; // inicializamos
     }
 
     void OnEnable() => controls.player.Enable();
@@ -29,10 +36,9 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions
 
     public void OnFight(InputAction.CallbackContext context)
     {
-        if (context.performed && Time.time >= nextBombTime)
+        if (context.performed && !playerInput.IsMoving())
         {
             PlaceBomb();
-            nextBombTime = Time.time + bombCooldown;
         }
     }
 
@@ -40,9 +46,10 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions
 
     private void PlaceBomb()
     {
+        if (bombsAvailable <= 0) return;
+
         GameObject bombObj = Instantiate(bombPrefab, transform.position, Quaternion.identity);
 
-        // Intentamos obtener el Collider2D (en caso que estÈ en un hijo)
         Collider2D col = bombObj.GetComponent<Collider2D>();
         if (col == null) col = bombObj.GetComponentInChildren<Collider2D>();
 
@@ -53,36 +60,61 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions
             Physics2D.IgnoreCollision(playerCollider, lastBombCollider, true);
             stillOnLastBomb = true;
         }
-        else
+
+        bombsAvailable--;
+
+        // Asignamos due√±o usando la interfaz IBombOwner
+        Bomb bombScript = bombObj.GetComponent<Bomb>();
+        if (bombScript != null)
         {
-            Debug.LogWarning("PlayerBomb: No se pudo ignorar colisiÛn (playerCollider o bomb collider null).");
+            bombScript.SetOwner(this);
         }
     }
 
     void Update()
     {
-        // Si estamos marcando que seguimos sobre la bomba, revisamos si ya salimos de la casilla (comprobaciÛn por grid)
+        // Manejar la √∫ltima bomba
         if (stillOnLastBomb && lastBombCollider != null)
         {
             float distance = Vector2.Distance(transform.position, lastBombCollider.transform.position);
-            float threshold = 0.6f; // Ajusta seg˙n el tamaÒo de la casilla (0.5 o m·s)
-
-            if (distance > threshold)
+            if (distance > 0.6f)
             {
                 Physics2D.IgnoreCollision(playerCollider, lastBombCollider, false);
                 stillOnLastBomb = false;
                 lastBombCollider = null;
             }
         }
+
+        // Ignorar bombas debajo del jugador
+        CheckAndIgnoreBombsUnderPlayer();
     }
 
-    // Llamar si la bomba explota/destruye antes de que el jugador se vaya
+    void CheckAndIgnoreBombsUnderPlayer()
+    {
+        Vector2 pos = transform.position;
+        Vector2 boxSize = new Vector2(0.9f, 0.9f);
+
+        Collider2D[] bombsUnderPlayer = Physics2D.OverlapBoxAll(pos, boxSize, 0f);
+        foreach (var bombCollider in bombsUnderPlayer)
+        {
+            if (bombCollider != null && bombCollider.CompareTag("Bomb"))
+            {
+                Physics2D.IgnoreCollision(playerCollider, bombCollider, true);
+            }
+        }
+    }
+
+    public void RecoverBomb()
+    {
+        bombsAvailable++;
+        if (bombsAvailable > maxBombs) bombsAvailable = maxBombs;
+    }
+
     public void ClearLastBombReference(Collider2D bombCollider)
     {
         if (lastBombCollider == bombCollider)
         {
-            // Aseguramos intentar re-habilitar (por si)
-            if (playerCollider != null && lastBombCollider != null)
+            if (playerCollider != null)
                 Physics2D.IgnoreCollision(playerCollider, lastBombCollider, false);
 
             lastBombCollider = null;
@@ -90,39 +122,25 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions
         }
     }
 
-    // MÈtodo que pregunta si un collider corresponde a la ˙ltima bomba (robusto)
     public bool EsUltimaBomba(Collider2D col)
     {
         if (!stillOnLastBomb || lastBombCollider == null || col == null) return false;
-
-        // Igualdad directa de collider
-        if (col == lastBombCollider) return true;
-
-        // Mismo gameObject
-        if (col.gameObject == lastBombCollider.gameObject) return true;
-
-        // Si ambos est·n unidos a un rigidbody, comparar el GameObject del rigidbody
+        if (col == lastBombCollider || col.gameObject == lastBombCollider.gameObject) return true;
         if (col.attachedRigidbody != null && lastBombCollider.attachedRigidbody != null)
-        {
-            if (col.attachedRigidbody.gameObject == lastBombCollider.attachedRigidbody.gameObject)
-                return true;
-        }
-
+            return col.attachedRigidbody.gameObject == lastBombCollider.attachedRigidbody.gameObject;
         return false;
     }
 
-    // MÈtodo p˙blico que puedes llamar desde otros (ej: si la bomba se destruye)
+    // üîπ Implementaci√≥n de IBombOwner
     public void NotifyBombDestroyed(Collider2D bombCollider)
     {
         ClearLastBombReference(bombCollider);
+        RecoverBomb(); // recarga de bomba autom√°tica
     }
 
     public void putBomb()
     {
-        if (Time.time >= nextBombTime)
-        {
+        if (!playerInput.IsMoving())
             PlaceBomb();
-            nextBombTime = Time.time + bombCooldown;
-        }
     }
 }
