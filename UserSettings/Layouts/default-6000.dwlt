@@ -218,8 +218,8 @@ MonoBehaviour:
     y: 0
     width: 823.19995
     height: 489.6
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -272,8 +272,8 @@ MonoBehaviour:
     y: 0
     width: 490.40002
     height: 716.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -940,7 +940,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79.200005
+    y: 24
     width: 221.4
     height: 463.6
   m_SerializedDataModeController:
@@ -957,23 +957,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 16f60000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 927efeffa47efeffb881feff589efeff72b4feff5cdffeff6edffeff6ce2feff307bffff427bffff407effff00fbffffa4bb0000a8e1000016f200009af40000
+      m_ExpandedIDs: 12a7ffff24a7ffff3aaaffff9ecfffff26e9ffff38e9ffff4aecffff00fbfffffad4000044d50000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: JoystickBackground
-        m_OriginalName: JoystickBackground
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -90536
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 4
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 8}
@@ -1005,8 +1005,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 222.40001
-    y: 79.200005
+    x: 223.4
+    y: 24
     width: 821.19995
     height: 463.6
   m_SerializedDataModeController:
@@ -1026,7 +1026,7 @@ MonoBehaviour:
   m_ShowGizmos: 1
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 2160, y: 1080}
+  m_TargetSize: {x: 1026.5, y: 513}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1035,16 +1035,16 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 1
   m_Stats: 0
-  m_SelectedSizes: 05000000000000000000000008000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 05000000000000000000000010000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -864
-    m_HBaseRangeMax: 864
-    m_VBaseRangeMin: -432
-    m_VBaseRangeMax: 432
+    m_HBaseRangeMin: -410.6
+    m_HBaseRangeMax: 410.6
+    m_VBaseRangeMin: -205.2
+    m_VBaseRangeMax: 205.2
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1064,7 +1064,7 @@ MonoBehaviour:
       y: 21
       width: 821.19995
       height: 442.6
-    m_Scale: {x: 0.47523144, y: 0.47523144}
+    m_Scale: {x: 0.99999994, y: 0.99999994}
     m_Translation: {x: 410.59998, y: 221.3}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -1072,12 +1072,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -864
-      y: -465.66785
-      width: 1728
-      height: 931.3357
+      x: -410.6
+      y: -221.30002
+      width: 821.2
+      height: 442.60004
     m_MinimalGUI: 1
-  m_defaultScale: 0.47523144
+  m_defaultScale: 0.99999994
   m_LastWindowPixelSize: {x: 1026.5, y: 579.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -1107,9 +1107,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 568.8
+    y: 513.6
     width: 1044.6
-    height: 201.19998
+    height: 201.20001
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1132,7 +1132,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/PlayerScripts
+    - Assets/Sprites
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1142,16 +1142,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/PlayerScripts
+  - Assets/Sprites
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\Dreyk\Mobile-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: dcbd0000
-    m_LastClickedID: 48604
-    m_ExpandedIDs: 00000000a2bc0000dabd000000ca9a3bffffff7f
+    m_SelectedIDs: 1abe0000
+    m_LastClickedID: 48666
+    m_ExpandedIDs: 00000000d8bd0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1180,7 +1180,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a2bc0000
+    m_ExpandedIDs: 00000000d8bd0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1209,7 +1209,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300001ebb0000f4c0000030be0000c0bb000000000000
+    m_ExpandedInstanceIDs: c62300001ebb0000f4c0000030be0000c0bb00000000000038c400000ebc0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1295,8 +1295,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1045.6
-    y: 79.200005
+    x: 1046.6
+    y: 24
     width: 489.40002
     height: 690.8
   m_SerializedDataModeController:
