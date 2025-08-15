@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscripts\\playerbomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|c:\\users\\dreyk\\mobile-game\\assets\\playerscripts\\joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\playerscripts\\joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscripts\\joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -79,8 +79,7 @@
               "ViewState": "AgIAACkAAAAAAAAAAAAAwBUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-09T00:17:49.894Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -90,7 +89,7 @@
               "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerController.cs",
               "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\PlayerScripts\\PlayerController.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAA4wJAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAiwJAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-09T00:17:53.678Z",
               "IsPinned": true,
@@ -121,19 +120,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-09T00:47:05.483Z",
               "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Joystick.cs",
-              "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\Joystick.cs",
-              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\Joystick.cs",
-              "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\Joystick.cs",
-              "RelativeToolTip": "Assets\\PlayerScripts\\Joystick.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T02:50:14Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -168,6 +154,18 @@
               "RelativeToolTip": "Assets\\Scripts\\PlayerControls.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-08T04:54:23.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Joystick.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\Joystick.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\Joystick.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\Joystick.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\Joystick.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T02:50:14Z"
             },
             {
               "$type": "Bookmark",

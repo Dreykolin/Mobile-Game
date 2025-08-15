@@ -143,7 +143,6 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
         return isMoving;
     }
 
-
 // Funciones que se activan con los botones táctiles
 public void MoveLeft()
     {
