@@ -4,18 +4,17 @@ using UnityEngine.InputSystem;
 public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
 {
     private PlayerControls controls;
-    private Vector2 moveInput = Vector2.zero;
     private bool isMoving = false;
     private Vector3 targetPosition;
     public float moveSpeed = 5f;
 
-    // Referencia al PlayerBomb para saber cuál bomba ignorar
     private PlayerBomb playerBomb;
 
-    // Variables para el movimiento continuo
     private Vector3 currentDirection = Vector3.zero;
-    private float moveTimer = 0f;
-    private const float moveInterval = 0.2f; // Intervalo de tiempo para cada paso
+    private Vector2 keyboardMoveInput = Vector2.zero;
+
+    [Header("UI Controls")]
+    public Joystick joystick;
 
     void Awake()
     {
@@ -33,12 +32,7 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
-
-        if (context.canceled)
-        {
-            StopMove();
-        }
+        keyboardMoveInput = context.ReadValue<Vector2>();
     }
 
     public void OnFight(InputAction.CallbackContext context)
@@ -51,7 +45,7 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
 
     void Update()
     {
-        // Lógica para el movimiento real hacia targetPosition
+        // Movimiento suave hacia el objetivo
         if (isMoving)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
@@ -59,33 +53,45 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
             {
                 transform.position = targetPosition;
                 isMoving = false;
+            }
+        }
 
-                // Una vez que el paso termina, revisamos si debemos dar otro
-                CheckForMovement();
+        // Lógica para determinar la dirección de movimiento
+        Vector2 inputVector = Vector2.zero;
+        if (joystick != null && joystick.input.sqrMagnitude > 0.1f)
+        {
+            inputVector = joystick.input;
+        }
+        else if (keyboardMoveInput.sqrMagnitude > 0.1f)
+        {
+            inputVector = keyboardMoveInput;
+        }
+
+        // Si hay input, actualizamos la dirección cardinal
+        if (inputVector.sqrMagnitude > 0.0001f)
+        {
+            if (Mathf.Abs(inputVector.x) > Mathf.Abs(inputVector.y))
+            {
+                currentDirection = new Vector3(Mathf.Sign(inputVector.x), 0, 0);
+            }
+            else
+            {
+                currentDirection = new Vector3(0, Mathf.Sign(inputVector.y), 0);
             }
         }
         else
         {
-            // Si el jugador no se está moviendo, revisamos el input del teclado
-            // Esto es para que funcione el input del teclado/gamepad sin los botones táctiles
-            if (moveInput != Vector2.zero)
-            {
-                if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y))
-                {
-                    currentDirection.y = 0;
-                    currentDirection.x = Mathf.Sign(moveInput.x);
-                }
-                else
-                {
-                    currentDirection.x = 0;
-                    currentDirection.y = Mathf.Sign(moveInput.y);
-                }
-                MakeMove(currentDirection);
-            }
+            currentDirection = Vector3.zero;
+        }
+
+        // === ¡El cambio clave está aquí! ===
+        // Si no se está moviendo y hay una dirección, intenta dar un paso.
+        if (!isMoving && currentDirection != Vector3.zero)
+        {
+            MakeMove(currentDirection);
         }
     }
 
-    // Lógica principal de un solo paso de movimiento
     private void MakeMove(Vector3 direction)
     {
         if (isMoving) return;
@@ -124,50 +130,8 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
         }
     }
 
-    // Funciones que se activan con los botones táctiles
-    // Al llamarlas, establecen la dirección y la lógica se encarga del resto
-    public void MoveLeft()
-    {
-        currentDirection = Vector3.left;
-        MakeMove(currentDirection);
-    }
+    // ... Las funciones MoveX y StopMove ya no son necesarias con esta lógica.
 
-    public void MoveRight()
-    {
-        currentDirection = Vector3.right;
-        MakeMove(currentDirection);
-    }
-
-    public void MoveUp()
-    {
-        currentDirection = Vector3.up;
-        MakeMove(currentDirection);
-    }
-
-    public void MoveDown()
-    {
-        currentDirection = Vector3.down;
-        MakeMove(currentDirection);
-    }
-
-    public void StopMove()
-    {
-        currentDirection = Vector3.zero;
-        moveInput = Vector2.zero; // También reseteamos el input del teclado
-    }
-
-    // Método para revisar si debemos seguir moviéndonos
-    private void CheckForMovement()
-    {
-        // Si hay una dirección definida, intentamos dar otro paso
-        if (currentDirection != Vector3.zero)
-        {
-            MakeMove(currentDirection);
-        }
-    }
-
-
-    // Este método se llama SOLO cuando el objeto está seleccionado en la escena y el script está activo
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
@@ -177,5 +141,36 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
     public bool IsMoving()
     {
         return isMoving;
+    }
+
+
+// Funciones que se activan con los botones táctiles
+public void MoveLeft()
+    {
+        currentDirection = Vector3.left;
+        if (!isMoving) MakeMove(currentDirection);
+    }
+
+    public void MoveRight()
+    {
+        currentDirection = Vector3.right;
+        if (!isMoving) MakeMove(currentDirection);
+    }
+
+    public void MoveUp()
+    {
+        currentDirection = Vector3.up;
+        if (!isMoving) MakeMove(currentDirection);
+    }
+
+    public void MoveDown()
+    {
+        currentDirection = Vector3.down;
+        if (!isMoving) MakeMove(currentDirection);
+    }
+
+    public void StopMove()
+    {
+        currentDirection = Vector3.zero;
     }
 }
