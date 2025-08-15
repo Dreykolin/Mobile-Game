@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Dreyk\\Mobile-Game\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\playerscripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|c:\\users\\dreyk\\mobile-game\\assets\\objects\\scripts\\camerascript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\objects\\scripts\\camerascript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\playerscripts\\playerbomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscripts\\playerbomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\playerscripts\\playerbombbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscripts\\playerbombbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|c:\\users\\dreyk\\mobile-game\\assets\\playerscripts\\playerbomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscripts\\playerbomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\playerscripts\\playerbuttoninput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscripts\\playerbuttoninput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Scripts\\PlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\objects\\scripts\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\objects\\scripts\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\playerscripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\objects\\scripts\\restartbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\playerscripts\\playercontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscripts\\playercontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\playerscripts\\playerbuttoninput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscripts\\playerbuttoninput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\objects\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,38 +62,38 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PlayerBomb.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerBomb.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerBomb.cs",
               "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerBomb.cs",
               "RelativeToolTip": "Assets\\PlayerScripts\\PlayerBomb.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAwAkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-09T00:17:49.894Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerController.cs",
               "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\PlayerScripts\\PlayerController.cs",
-              "ViewState": "AgIAAEgBAAAAAAAAAAAcwFMBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAvwBYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-09T00:17:53.678Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "bomb.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Objects\\scripts\\bomb.cs",
               "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\bomb.cs",
@@ -102,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Explosion.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Objects\\scripts\\Explosion.cs",
               "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\Explosion.cs",
@@ -114,8 +118,36 @@
               "IsPinned": true
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
+              "Title": "CameraScript.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Objects\\scripts\\CameraScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\CameraScript.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Objects\\scripts\\CameraScript.cs",
+              "RelativeToolTip": "Assets\\Objects\\scripts\\CameraScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T01:18:07.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Scripts\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Scripts\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T04:32:58.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "InputActionReference.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Library\\PackageCache\\com.unity.inputsystem@7fe8299111a7\\InputSystem\\Actions\\InputActionReference.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.inputsystem@7fe8299111a7\\InputSystem\\Actions\\InputActionReference.cs",
@@ -127,35 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Scripts\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Scripts\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T04:32:58.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerBombBot.cs",
-              "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerBombBot.cs",
-              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerBombBot.cs",
-              "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerBombBot.cs",
-              "RelativeToolTip": "Assets\\PlayerScripts\\PlayerBombBot.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAvwC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T07:22:49.129Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "PlayerControls.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Scripts\\PlayerControls.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControls.cs",
@@ -166,7 +170,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
+              "Title": "PlayerButtonInput.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerButtonInput.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerButtonInput.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerButtonInput.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\PlayerButtonInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T01:45:14.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlayerBombBot.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerBombBot.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerBombBot.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerBombBot.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\PlayerBombBot.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAADgvywAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T07:22:49.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "RestartButton.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Objects\\scripts\\RestartButton.cs",
               "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\RestartButton.cs",
@@ -178,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "PlayerControllerBot.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerControllerBot.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerControllerBot.cs",
@@ -190,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "PlayerControls.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerControls.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerControls.cs",
@@ -199,18 +227,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-09T07:20:08.307Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PlayerButtonInput.cs",
-              "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerButtonInput.cs",
-              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerButtonInput.cs",
-              "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerButtonInput.cs",
-              "RelativeToolTip": "Assets\\PlayerScripts\\PlayerButtonInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T01:45:14.029Z"
             }
           ]
         }
