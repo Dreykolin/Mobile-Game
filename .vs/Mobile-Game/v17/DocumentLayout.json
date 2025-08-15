@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Dreyk\\Mobile-Game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\playerscripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\playerscripts\\playerbomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscripts\\playerbomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|c:\\users\\dreyk\\mobile-game\\assets\\playerscripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|c:\\users\\dreyk\\mobile-game\\assets\\objects\\scripts\\camerascript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\objects\\scripts\\camerascript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\objects\\scripts\\camerascript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\playerscripts\\playerbomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscripts\\playerbomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\playerscripts\\playerbombbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,30 +62,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PlayerBomb.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerBomb.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerBomb.cs",
               "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerBomb.cs",
               "RelativeToolTip": "Assets\\PlayerScripts\\PlayerBomb.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAwAkAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-09T00:17:49.894Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerController.cs",
               "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\PlayerScripts\\PlayerController.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAvwBYAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-09T00:17:53.678Z",
               "IsPinned": true,
@@ -116,23 +117,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-09T00:47:05.483Z",
               "IsPinned": true
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CameraScript.cs",
-              "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Objects\\scripts\\CameraScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\CameraScript.cs",
-              "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Objects\\scripts\\CameraScript.cs",
-              "RelativeToolTip": "Assets\\Objects\\scripts\\CameraScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T01:18:07.006Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -167,6 +151,22 @@
               "RelativeToolTip": "Assets\\Scripts\\PlayerControls.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-08T04:54:23.262Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CameraScript.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Objects\\scripts\\CameraScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\CameraScript.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Objects\\scripts\\CameraScript.cs",
+              "RelativeToolTip": "Assets\\Objects\\scripts\\CameraScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T01:18:07.006Z"
             },
             {
               "$type": "Document",
