@@ -19,6 +19,11 @@ public class MainMenu : MonoBehaviour
         // Aquí podrías cargar otro menú o panel de opciones.
         Debug.Log("Abriendo opciones...");
     }
+    public void RetryGame()
+    {
+        Scene current = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(current.buildIndex);
+    }
 
     // Función para el botón "Salir"
     public void QuitGame()

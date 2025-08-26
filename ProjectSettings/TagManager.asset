@@ -7,6 +7,8 @@ TagManager:
   - blocks
   - destructible
   - Bomb
+  - IceWall
+  - Explotion
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - UI
   - Explotion
   - Bomb
-  - 
-  - 
+  - IceWall
+  - Subterranean
   - 
   - 
   - 

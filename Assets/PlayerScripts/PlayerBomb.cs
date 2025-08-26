@@ -30,6 +30,13 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwn
     private Vector3Int lastCell;
     private Vector3Int prevCell;
 
+    private bool bombsLocked = false;
+
+    public void SetBombsLocked(bool v)
+    {
+        bombsLocked = v;
+    }
+
     void Awake()
     {
         playerInput = GetComponent<PlayerInputExample>();
@@ -79,6 +86,13 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwn
     }
 
     // ————— LOOP —————
+    public void SetMaxBombs(int n)
+    {
+        maxBombs = Mathf.Max(1, n);  // nunca menos de 1
+        // opcional: reajustar currentBombs si quieres
+        if (bombsAvailable > maxBombs)
+            bombsAvailable = maxBombs;
+    }
     void Update()
     {
         // Track de celda actual y previa
@@ -197,6 +211,31 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwn
 
     public void putBomb()
     {
+
+        if (bombsLocked)
+        {
+            Debug.Log("[PlayerBomb] Bombas bloqueadas durante el escape.");
+            return;
+        }
         PlaceBomb();
+    }
+    // Función pública para que otros scripts obtengan una posición válida en la grilla
+    public Vector3 GetGridPosition(PlayerInputExample playerInput)
+    {
+        if (gridTilemap != null)
+        {
+            bool isMoving = playerInput != null && playerInput.IsMoving();
+            Vector3Int targetCell = isMoving
+                ? prevCell + new Vector3Int(lastCardinalDir.x, lastCardinalDir.y, 0)
+                : lastCell;
+
+            return gridTilemap.CellToWorld(targetCell) + new Vector3(0.5f, 0.5f, 0f);
+        }
+        else
+        {
+            // Fallback sin Tilemap
+            Vector3 p = transform.position;
+            return new Vector3(Mathf.Floor(p.x) + 0.5f, Mathf.Floor(p.y) + 0.5f, 0);
+        }
     }
 }

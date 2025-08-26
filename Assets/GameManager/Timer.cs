@@ -1,13 +1,14 @@
-using UnityEngine;
-using TMPro; // Necesitas este namespace para usar TextMesh Pro
+Ôªøusing UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    // Asigna este objeto de texto en el Inspector de Unity
-    public TextMeshProUGUI timerText;
+    [Header("UI")]
+    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private DeathMenu deathMenu; // ‚Üê arr√°stralo en el Inspector
 
-    // La duraciÛn del nivel en segundos
-    public float levelDuration = 180f; // 3 minutos
+    [Header("Timer")]
+    [SerializeField] private float levelDuration = 180f;
 
     private float currentTime;
     private bool isTimerRunning = false;
@@ -21,36 +22,29 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (isTimerRunning)
+        if (!isTimerRunning) return;
+
+        currentTime -= Time.unscaledDeltaTime; // usa unscaled por si pausas en otro lado
+        if (currentTime <= 0f)
         {
-            // Reduce el tiempo cada segundo
-            currentTime -= Time.deltaTime;
-
-            if (currentTime <= 0)
-            {
-                currentTime = 0;
-                isTimerRunning = false;
-                GameOver();
-            }
-
-            UpdateTimerUI();
+            currentTime = 0f;
+            isTimerRunning = false;
+            GameOver();
         }
+        UpdateTimerUI();
     }
 
     void UpdateTimerUI()
-    {   
-        // Convierte los segundos a un formato de minutos:segundos
-        int minutes = Mathf.FloorToInt(currentTime / 60);
-        int seconds = Mathf.FloorToInt(currentTime % 60);
-
-        // Actualiza el texto en la UI
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    {
+        int minutes = Mathf.FloorToInt(currentTime / 60f);
+        int seconds = Mathf.FloorToInt(currentTime % 60f);
+        if (timerText) timerText.text = $"{minutes:00}:{seconds:00}";
     }
 
     void GameOver()
     {
-        Debug.Log("°Tiempo agotado! El juego ha terminado.");
-        // AquÌ puedes aÒadir la lÛgica para terminar el juego,
-        // como mostrar un panel de "Game Over".
+        Debug.Log("¬°Tiempo agotado! El juego ha terminado.");
+        if (deathMenu) deathMenu.Show();   // ‚Üê abre el men√∫ de muerte/fin
+        else Time.timeScale = 0f;          // fallback
     }
 }

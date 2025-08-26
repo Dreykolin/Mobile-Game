@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6800339877733807160}
   m_Layer: 0
   m_Name: explosionUpPrefab
-  m_TagString: Untagged
+  m_TagString: Explotion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 758261245
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 11
   m_Sprite: {fileID: 1192141575, guid: 26c782820d50feb40a6e24e95fe6a0d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

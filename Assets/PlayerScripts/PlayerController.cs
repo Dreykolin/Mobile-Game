@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
@@ -9,6 +9,7 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
     public float moveSpeed = 5f;
 
     private PlayerBomb playerBomb;
+    private PlayerIceWall icePower;
 
     private Vector3 currentDirection = Vector3.zero;
     private Vector2 keyboardMoveInput = Vector2.zero;
@@ -24,7 +25,10 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
 
         playerBomb = GetComponent<PlayerBomb>();
         if (playerBomb == null)
-            Debug.LogWarning("PlayerInputExample: No se encontró PlayerBomb en el mismo GameObject.");
+            Debug.LogWarning("PlayerInputExample: No se encontrÃ³ PlayerBomb en el mismo GameObject.");
+        icePower = GetComponent<PlayerIceWall>();
+        if (icePower == null)
+            Debug.LogWarning("PlayerIceWall: No se encontrÃ³ icePower en el mismo GameObject.");
     }
 
     void OnEnable() => controls.player.Enable();
@@ -56,7 +60,7 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
             }
         }
 
-        // Lógica para determinar la dirección de movimiento
+        // LÃ³gica para determinar la direcciÃ³n de movimiento
         Vector2 inputVector = Vector2.zero;
         if (joystick != null && joystick.input.sqrMagnitude > 0.1f)
         {
@@ -67,7 +71,7 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
             inputVector = keyboardMoveInput;
         }
 
-        // Si hay input, actualizamos la dirección cardinal
+        // Si hay input, actualizamos la direcciÃ³n cardinal
         if (inputVector.sqrMagnitude > 0.0001f)
         {
             if (Mathf.Abs(inputVector.x) > Mathf.Abs(inputVector.y))
@@ -84,8 +88,7 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
             currentDirection = Vector3.zero;
         }
 
-        // === ¡El cambio clave está aquí! ===
-        // Si no se está moviendo y hay una dirección, intenta dar un paso.
+        // Si no se estÃ¡ moviendo y hay una direcciÃ³n, intenta dar un paso.
         if (!isMoving && currentDirection != Vector3.zero)
         {
             MakeMove(currentDirection);
@@ -120,6 +123,11 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
                         break;
                     }
                 }
+                if (hit.CompareTag("IceWall"))
+                {
+                    blocked = true;
+                    break;
+                }
             }
         }
 
@@ -129,8 +137,6 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
             isMoving = true;
         }
     }
-
-    // ... Las funciones MoveX y StopMove ya no son necesarias con esta lógica.
 
     private void OnDrawGizmosSelected()
     {
@@ -143,8 +149,8 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
         return isMoving;
     }
 
-// Funciones que se activan con los botones táctiles
-public void MoveLeft()
+    // Botones tÃ¡ctiles
+    public void MoveLeft()
     {
         currentDirection = Vector3.left;
         if (!isMoving) MakeMove(currentDirection);
@@ -171,5 +177,14 @@ public void MoveLeft()
     public void StopMove()
     {
         currentDirection = Vector3.zero;
+    }
+
+    // ===== NUEVO: teletransporte/snap seguro al grid =====
+    public void ForceSnapTo(Vector3 worldPos)
+    {
+        isMoving = false;
+        targetPosition = worldPos;
+        transform.position = worldPos;
+        Physics2D.SyncTransforms(); // ðŸ‘ˆ importante
     }
 }
