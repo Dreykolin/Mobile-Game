@@ -1,11 +1,23 @@
-using UnityEngine;
-public class CameraFollow : MonoBehaviour { 
-    public Transform player; 
-    public Vector3 offset = new Vector3(0, 0, -10); 
-    public float smoothSpeed = 5f; // velocidad de suavizado
-    void LateUpdate() { if (player != null) { 
-            Vector3 targetPos = player.position + offset; 
-            transform.position = Vector3.Lerp(transform.position, targetPos, smoothSpeed * Time.deltaTime); 
-        } 
-    } 
+﻿using UnityEngine;
+
+public class CameraFollow2D : MonoBehaviour
+{
+    [Header("Target a seguir")]
+    public Transform target;
+
+    [Header("Ajustes de cámara")]
+    public float smoothSpeed = 0.125f;
+    public Vector3 offset = new Vector3(0f, 0f, -10f); 
+
+    void LateUpdate()
+    {
+        if (target == null) return;
+
+        Vector3 desiredPosition = target.position + offset;
+
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+
+        transform.position = smoothedPosition;
+
+    }
 }

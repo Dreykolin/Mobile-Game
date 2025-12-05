@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 using System.Collections;
 
-public class PlayerIceWall : MonoBehaviour, PlayerControls.IPlayerActions
+public class PlayerIceWall : MonoBehaviour
 {
     [Header("Paredes de Hielo")]
     public GameObject iceWallPrefab;
@@ -12,13 +11,10 @@ public class PlayerIceWall : MonoBehaviour, PlayerControls.IPlayerActions
 
     [Header("UI")]
     public CooldownWheelUI wallCooldownUI;  // reemplaza el BombCounterUI o agrégalo aparte
+    public GameObject wallCooldownVisual;   // 👈 este es el nuevo campo
 
     [Header("Grid / Tilemap")]
     [SerializeField] private Tilemap gridTilemap;
-
-
-    // input
-    private PlayerControls controls;
 
     // colisiones pared-propia
     private Collider2D lastWallCollider;
@@ -46,8 +42,6 @@ public class PlayerIceWall : MonoBehaviour, PlayerControls.IPlayerActions
 
     private bool wallsLocked = false;
 
-
-
     public void SetWallsLocked(bool locked)
     {
         wallsLocked = locked;
@@ -58,11 +52,10 @@ public class PlayerIceWall : MonoBehaviour, PlayerControls.IPlayerActions
             wallPreviewInstance = null;
         }
     }
+
     void Awake()
     {
         playerInput = GetComponent<PlayerInputExample>();
-        controls = new PlayerControls();
-        controls.player.SetCallbacks(this);
         playerCollider = GetComponent<Collider2D>();
     }
 
@@ -76,28 +69,6 @@ public class PlayerIceWall : MonoBehaviour, PlayerControls.IPlayerActions
 
         // Inicializa el wheel como "listo"
         if (wallCooldownUI != null) wallCooldownUI.SetReady();
-    }
-
-    void OnEnable() => controls.player.Enable();
-    void OnDisable() => controls.player.Disable();
-
-    // ————— INPUT —————
-    public void OnFight(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-            PlaceWall();
-    }
-
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        Vector2 v = context.ReadValue<Vector2>();
-        if (v.sqrMagnitude > 0.0001f)
-        {
-            if (Mathf.Abs(v.x) >= Mathf.Abs(v.y))
-                lastCardinalDir = new Vector2Int(v.x > 0 ? 1 : -1, 0);
-            else
-                lastCardinalDir = new Vector2Int(0, v.y > 0 ? 1 : -1);
-        }
     }
 
     void Update()
@@ -174,10 +145,6 @@ public class PlayerIceWall : MonoBehaviour, PlayerControls.IPlayerActions
         }
     }
 
-    // Debounce (pon esto a nivel de clase si aún no lo tienes)
-    // private float lastTeleportTime = -999f;
-    // private const float teleportDebounce = 0.05f;
-
     void UpdateWallCollisions()
     {
         if (Time.time - lastTeleportTime < teleportDebounce) return;
@@ -221,21 +188,6 @@ public class PlayerIceWall : MonoBehaviour, PlayerControls.IPlayerActions
         lastTeleportTime = Time.time;
     }
 
-
-
-    bool IsPlayerOnWall(Collider2D wall)
-    {
-        if (wall == null) return false;
-
-        var hits = Physics2D.OverlapBoxAll(transform.position, new Vector2(0.9f, 0.9f), 0f);
-        foreach (var h in hits)
-        {
-            if (h != null && h.CompareTag("IceWall"))
-                return true;
-        }
-        return false;
-    }
-
     private void ResolvePlayerOverlapWithWall(Collider2D wallCol)
     {
         if (playerCollider == null || wallCol == null) return;
@@ -245,7 +197,6 @@ public class PlayerIceWall : MonoBehaviour, PlayerControls.IPlayerActions
         Vector2 pos = transform.position;
         Vector2 boxSize = new Vector2(0.9f, 0.9f);
 
-        // ¿Hay una IceWall debajo del player ahora mismo?
         Collider2D[] hits = Physics2D.OverlapBoxAll(pos, boxSize, 0f);
         bool hayParedDebajo = false;
         foreach (var h in hits)
@@ -260,7 +211,6 @@ public class PlayerIceWall : MonoBehaviour, PlayerControls.IPlayerActions
 
         Debug.Log("⚠️ Pared debajo tuyo, teletransportando a lastCell...");
 
-        // Tepear a la CASILLA ACTUAL que trackeas (lastCell)
         Vector3 backWorldCenter = (gridTilemap != null)
             ? gridTilemap.GetCellCenterWorld(lastCell)
             : new Vector3(Mathf.Floor(transform.position.x) + 0.5f,
@@ -271,16 +221,13 @@ public class PlayerIceWall : MonoBehaviour, PlayerControls.IPlayerActions
 
         Physics2D.SyncTransforms();
 
-        // Asegurar pared sólida
         Physics2D.IgnoreCollision(playerCollider, wallCol, false);
         lastWallCollider = null;
         stillOnLastWall = false;
     }
 
-
     private void PlaceWallAtPreview()
     {
-        // ⛔️ chequea el lock además del cooldown
         if (wallsLocked || !canPlaceWall || wallPreviewInstance == null) return;
 
         Vector3 spawnPos = wallPreviewInstance.transform.position;
@@ -310,7 +257,6 @@ public class PlayerIceWall : MonoBehaviour, PlayerControls.IPlayerActions
 
     private void PlaceWall()
     {
-        // ⛔️ chequea el lock además del cooldown
         if (wallsLocked || !canPlaceWall || wallPreviewInstance == null) return;
 
         Vector3 spawnPos = wallPreviewInstance.transform.position;
@@ -334,8 +280,7 @@ public class PlayerIceWall : MonoBehaviour, PlayerControls.IPlayerActions
         StartCoroutine(WallCooldownRoutine());
     }
 
-// ✅ Corrutina añadida
-private IEnumerator WallCooldownRoutine()
+    private IEnumerator WallCooldownRoutine()
     {
         yield return new WaitForSeconds(wallCooldown);
         canPlaceWall = true;
@@ -391,4 +336,25 @@ private IEnumerator WallCooldownRoutine()
             Gizmos.DrawWireCube(wallPreviewInstance.transform.position, Vector3.one * 0.9f);
         }
     }
+
+
+
+    void OnEnable()
+    {
+        if (wallJoystick != null)
+            wallJoystick.gameObject.SetActive(true);
+
+        if (wallCooldownVisual != null)
+            wallCooldownVisual.SetActive(true);
+    }
+
+    void OnDisable()
+    {
+        if (wallJoystick != null)
+            wallJoystick.gameObject.SetActive(false);
+
+        if (wallCooldownVisual != null)
+            wallCooldownVisual.SetActive(false);
+    }
+
 }

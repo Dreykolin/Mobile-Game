@@ -10,7 +10,18 @@ public class DigEscapeTap : MonoBehaviour
     [Header("Refs")]
     [SerializeField] private Tilemap gridTilemap;
     [SerializeField] private GameObject targetCursorPrefab; // opcional (visual destino)
+    [SerializeField] private Tilemap rangeTilemap; // 👈 NUEVO: Tilemap para dibujar el rango
+    [SerializeField] private TileBase rangeHighlightTile; //
+    [Header("Dig Range")]
+    [SerializeField] private int selectionRange = 5; // Radio de acción (ej. 5 para un rango 5x5)
     private GameObject targetCursorInstance;
+
+
+    [Header("Audio")]
+    public AudioClip digClip;          // 🔊 Sonido al iniciar el túnel
+
+    private AudioSource audioSource;   // 🔊 Referencia al AudioSource del jugador
+
 
     [Header("Escape Settings")]
     public int maxSteps = 20;             // límite de pasos/expansiones (seguridad)
@@ -158,6 +169,10 @@ public class DigEscapeTap : MonoBehaviour
         targeting = true;
         startCell = gridTilemap.WorldToCell(transform.position);
         SetUILocked(true);
+
+        // ✨ NUEVO: DIBUJAR EL RANGO DE ACCIÓN (6x6)
+        // Usaremos 5 para un rango 5x5 centrado (o ajusta a 6 si quieres 6x6)
+        DrawSelectionRange(startCell, 5);
         // crea/activa cursor si quieres mostrar destino
         if (targetCursorPrefab != null && targetCursorInstance == null)
             targetCursorInstance = Instantiate(targetCursorPrefab);
@@ -211,7 +226,26 @@ public class DigEscapeTap : MonoBehaviour
 
         Vector3Int destCell = gridTilemap.WorldToCell(world);
 
-        // 1) El destino debe ser jugable (libre)
+        // 2) Origen real al momento del tap
+        Vector3Int currentStart = gridTilemap.WorldToCell(transform.position);
+
+        // ✨ NUEVO: RESTRICCIÓN DE RANGO
+        // Calcula la distancia máxima permitida en X o Y (la mitad del rango).
+        // Ej: si selectionRange = 5, maxDistance = 2.
+        int maxDistance = Mathf.FloorToInt(selectionRange / 2f);
+
+        // Si la distancia absoluta en X o Y es mayor que la distancia máxima, el destino es inválido.
+        if (Mathf.Abs(destCell.x - currentStart.x) > maxDistance ||
+            Mathf.Abs(destCell.y - currentStart.y) > maxDistance)
+        {
+            Debug.Log("[DigEscapeTap] Destino fuera del radio de acción.");
+            // Para que el jugador pueda volver a intentar dentro del rango visible, 
+            // NO llamamos a EndTargeting() aquí, solo retornamos.
+            return;
+        }
+
+
+        // 1) El destino debe ser jugable (libre) - (Esto ya estaba)
         if (requireFreeDestination && IsBlocked(destCell))
         {
             Debug.Log("[DigEscapeTap] Destino bloqueado (no jugable).");
@@ -219,10 +253,7 @@ public class DigEscapeTap : MonoBehaviour
             return;
         }
 
-        // 2) Origen real al momento del tap
-        Vector3Int currentStart = gridTilemap.WorldToCell(transform.position);
-
-        // 3) Construimos el path
+        // 3) Construimos el path (el resto del código sigue igual)
         List<Vector3Int> path;
         if (tunnelThroughEverything)
         {
@@ -241,6 +272,8 @@ public class DigEscapeTap : MonoBehaviour
             EndTargeting();
             return;
         }
+
+        // ... (El resto del código de ejecución del túnel) ...
 
         // Cursor visual (opcional)
         if (targetCursorInstance != null)
@@ -282,7 +315,11 @@ public class DigEscapeTap : MonoBehaviour
     {
         targeting = false;
         if (targetCursorInstance != null) targetCursorInstance.SetActive(false);
-        SetUILocked(false); // <- desbloquear si solo estabas apuntando
+
+        // ✨ NUEVO: BORRAR EL RANGO
+        if (rangeTilemap != null) rangeTilemap.ClearAllTiles();
+
+        SetUILocked(false);
         Debug.Log("[DigEscapeTap] Targeting OFF");
     }
 
@@ -357,10 +394,59 @@ public class DigEscapeTap : MonoBehaviour
         path.Reverse();
         return path;
     }
-
     // === Movimiento por el camino ===
+
+    private void DrawSelectionRange(Vector3Int centerCell, int range)
+    {
+        if (rangeTilemap == null || rangeHighlightTile == null) return;
+
+        // 1. Borrar cualquier dibujo anterior
+        rangeTilemap.ClearAllTiles();
+
+        // 2. Definir el área cuadrada (e.g., 6x6)
+        int halfRange = range / 2;
+
+        // Iterar sobre las celdas dentro del rango
+        for (int x = -halfRange; x <= halfRange; x++)
+        {
+            for (int y = -halfRange; y <= halfRange; y++)
+            {
+                Vector3Int cell = new Vector3Int(
+                    centerCell.x + x,
+                    centerCell.y + y,
+                    0 // Ojo: asume Z=0 para el Tilemap
+                );
+
+                // Opcional: Si quieres excluir la celda actual (el jugador)
+                // if (cell == centerCell) continue;
+
+                // Opcional: Si quieres que el path sea válido,
+                // ¡solo dibuja el highlight si la celda NO está bloqueada!
+                if (!IsBlocked(cell))
+                {
+                    rangeTilemap.SetTile(cell, rangeHighlightTile);
+                }
+                // Si el túnel atraviesa todo, podemos dibujar todo el rango
+                else if (tunnelThroughEverything)
+                {
+                    rangeTilemap.SetTile(cell, rangeHighlightTile);
+                }
+            }
+        }
+    }
     private IEnumerator CoDigAlong(List<Vector3Int> path)
     {
+        // 🔊 Reproducir sonido de excavar al inicio
+        if (digClip != null)
+        {
+            if (audioSource == null)
+                audioSource = GetComponent<AudioSource>() ?? gameObject.AddComponent<AudioSource>();
+
+            audioSource.playOnAwake = false;
+            audioSource.volume = 1f; // Ajusta si quieres
+            audioSource.PlayOneShot(digClip);
+        }
+
         // Cierra el modo de selección visual
         EndTargeting();
 

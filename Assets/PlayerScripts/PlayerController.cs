@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
 {
     private PlayerControls controls;
+
+    // MOVIMIENTO POR CASILLA
     private bool isMoving = false;
     private Vector3 targetPosition;
     public float moveSpeed = 5f;
@@ -17,18 +19,29 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
     [Header("UI Controls")]
     public Joystick joystick;
 
+    // ---------- ANIMACIÓN ----------
+    private Animator anim;
+    private Vector2 lastLookDir = Vector2.down; // por defecto mira abajo
+    [Header("Audio")]
+    public AudioClip walkSound; // El sonido del paso que arrastrarás desde el Inspector
+    private AudioSource audioSource;
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null) // Asegurarse de que el componente existe
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        audioSource.clip = walkSound;
+        audioSource.playOnAwake = false; // Queremos reproducirlo con código
         controls = new PlayerControls();
         controls.player.SetCallbacks(this);
         targetPosition = transform.position;
 
+        anim = GetComponent<Animator>();
+
         playerBomb = GetComponent<PlayerBomb>();
-        if (playerBomb == null)
-            Debug.LogWarning("PlayerInputExample: No se encontró PlayerBomb en el mismo GameObject.");
         icePower = GetComponent<PlayerIceWall>();
-        if (icePower == null)
-            Debug.LogWarning("PlayerIceWall: No se encontró icePower en el mismo GameObject.");
     }
 
     void OnEnable() => controls.player.Enable();
@@ -42,53 +55,88 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
     public void OnFight(InputAction.CallbackContext context)
     {
         if (context.performed)
-        {
             Debug.Log("Atacando!");
-        }
     }
+    private float stepInterval = 0.3f; // tiempo entre pasos
+    private float stepTimer = 0f;
 
     void Update()
     {
-        // Movimiento suave hacia el objetivo
+        // ------------------------------------------------
+        // MOVER HACIA targetPosition
+        // ------------------------------------------------
         if (isMoving)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+
+            float snap = 1f / 32f;
+            Vector3 pos = transform.position;
+            pos.x = Mathf.Round(pos.x / snap) * snap;
+            pos.y = Mathf.Round(pos.y / snap) * snap;
+            transform.position = pos;
+
             if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
             {
                 transform.position = targetPosition;
                 isMoving = false;
             }
-        }
 
-        // Lógica para determinar la dirección de movimiento
-        Vector2 inputVector = Vector2.zero;
-        if (joystick != null && joystick.input.sqrMagnitude > 0.1f)
-        {
-            inputVector = joystick.input;
-        }
-        else if (keyboardMoveInput.sqrMagnitude > 0.1f)
-        {
-            inputVector = keyboardMoveInput;
-        }
-
-        // Si hay input, actualizamos la dirección cardinal
-        if (inputVector.sqrMagnitude > 0.0001f)
-        {
-            if (Mathf.Abs(inputVector.x) > Mathf.Abs(inputVector.y))
+            // -------------------------------
+            // REPRODUCIR SONIDO DE PASOS
+            // -------------------------------
+            stepTimer -= Time.deltaTime;
+            if (stepTimer <= 0f)
             {
-                currentDirection = new Vector3(Mathf.Sign(inputVector.x), 0, 0);
-            }
-            else
-            {
-                currentDirection = new Vector3(0, Mathf.Sign(inputVector.y), 0);
+                if (walkSound != null)
+                {
+                    audioSource.Play();
+                    stepTimer = stepInterval;
+                }
             }
         }
         else
         {
-            currentDirection = Vector3.zero;
+            // Reiniciar timer cuando no se mueve
+            stepTimer = 0f;
         }
 
-        // Si no se está moviendo y hay una dirección, intenta dar un paso.
+        // ------------------------------------------------
+        // ELEGIR DIRECCIÓN (teclado o joystick)
+        // ------------------------------------------------
+        Vector2 inputVector = Vector2.zero;
+
+        if (joystick != null && joystick.input.sqrMagnitude > 0.1f)
+            inputVector = joystick.input;
+        else if (keyboardMoveInput.sqrMagnitude > 0.1f)
+            inputVector = keyboardMoveInput;
+
+        if (!isMoving)
+        {
+            if (inputVector.sqrMagnitude > 0.0001f)
+            {
+                if (Mathf.Abs(inputVector.x) > Mathf.Abs(inputVector.y))
+                    currentDirection = new Vector3(Mathf.Sign(inputVector.x), 0, 0);
+                else
+                    currentDirection = new Vector3(0, Mathf.Sign(inputVector.y), 0);
+
+                lastLookDir = currentDirection;
+            }
+            else
+            {
+                currentDirection = Vector3.zero;
+            }
+        }
+
+        // ------------------------------------------------
+        // ACTUALIZAR PARÁMETROS DEL ANIMATOR
+        // ------------------------------------------------
+        anim.SetFloat("MoveX", lastLookDir.x);
+        anim.SetFloat("MoveY", lastLookDir.y);
+        anim.SetBool("IsMoving", isMoving);
+
+        // ------------------------------------------------
+        // INICIAR MOVIMIENTO SI NO SE ESTÁ MOVIENDO
+        // ------------------------------------------------
         if (!isMoving && currentDirection != Vector3.zero)
         {
             MakeMove(currentDirection);
@@ -102,32 +150,33 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
         Vector3 newPos = targetPosition + direction;
         Vector2 boxSize = new Vector2(0.9f, 0.9f);
         Collider2D[] hits = Physics2D.OverlapBoxAll((Vector2)newPos, boxSize, 0f);
+
         bool blocked = false;
 
-        if (hits != null)
+        foreach (Collider2D hit in hits)
         {
-            foreach (Collider2D hit in hits)
+            if (!hit) continue;
+
+            if (hit.CompareTag("blocks") || hit.CompareTag("destructible"))
             {
-                if (hit == null) continue;
-                if (hit.CompareTag("blocks") || hit.CompareTag("destructible"))
+                blocked = true;
+                break;
+            }
+
+            if (hit.CompareTag("Bomb"))
+            {
+                bool esMiBomba = (playerBomb != null && playerBomb.EsUltimaBomba(hit));
+                if (!esMiBomba)
                 {
                     blocked = true;
                     break;
                 }
-                if (hit.CompareTag("Bomb"))
-                {
-                    bool esMiBomba = (playerBomb != null && playerBomb.EsUltimaBomba(hit));
-                    if (!esMiBomba)
-                    {
-                        blocked = true;
-                        break;
-                    }
-                }
-                if (hit.CompareTag("IceWall"))
-                {
-                    blocked = true;
-                    break;
-                }
+            }
+
+            if (hit.CompareTag("IceWall"))
+            {
+                blocked = true;
+                break;
             }
         }
 
@@ -135,6 +184,9 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
         {
             targetPosition = newPos;
             isMoving = true;
+
+            // ❌ LÍNEA ELIMINADA: Ya no llamamos anim.SetBool("IsMoving", true) aquí.
+            // Lo hace la línea centralizada al final de Update.
         }
     }
 
@@ -144,47 +196,24 @@ public class PlayerInputExample : MonoBehaviour, PlayerControls.IPlayerActions
         Gizmos.DrawWireCube(targetPosition, new Vector3(0.9f, 0.9f, 0));
     }
 
-    public bool IsMoving()
-    {
-        return isMoving;
-    }
+    public bool IsMoving() => isMoving;
 
-    // Botones táctiles
-    public void MoveLeft()
-    {
-        currentDirection = Vector3.left;
-        if (!isMoving) MakeMove(currentDirection);
-    }
-
-    public void MoveRight()
-    {
-        currentDirection = Vector3.right;
-        if (!isMoving) MakeMove(currentDirection);
-    }
-
-    public void MoveUp()
-    {
-        currentDirection = Vector3.up;
-        if (!isMoving) MakeMove(currentDirection);
-    }
-
-    public void MoveDown()
-    {
-        currentDirection = Vector3.down;
-        if (!isMoving) MakeMove(currentDirection);
-    }
+    // JOYSTICK BUTTONS
+    public void MoveLeft() { currentDirection = Vector3.left; if (!isMoving) MakeMove(currentDirection); }
+    public void MoveRight() { currentDirection = Vector3.right; if (!isMoving) MakeMove(currentDirection); }
+    public void MoveUp() { currentDirection = Vector3.up; if (!isMoving) MakeMove(currentDirection); }
+    public void MoveDown() { currentDirection = Vector3.down; if (!isMoving) MakeMove(currentDirection); }
 
     public void StopMove()
     {
         currentDirection = Vector3.zero;
     }
 
-    // ===== NUEVO: teletransporte/snap seguro al grid =====
     public void ForceSnapTo(Vector3 worldPos)
     {
         isMoving = false;
         targetPosition = worldPos;
         transform.position = worldPos;
-        Physics2D.SyncTransforms(); // 👈 importante
+        Physics2D.SyncTransforms();
     }
 }

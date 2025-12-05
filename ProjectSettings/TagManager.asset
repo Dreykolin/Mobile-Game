@@ -9,6 +9,8 @@ TagManager:
   - Bomb
   - IceWall
   - Explotion
+  - Fireball
+  - Mobs
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - Bomb
   - IceWall
   - Subterranean
-  - 
+  - FireBall
   - 
   - 
   - 

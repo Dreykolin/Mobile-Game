@@ -1,34 +1,54 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    // Duración de la explosión en segundos
     public float lifeTime = 0.7f;
 
     void Start()
     {
-        // Destruye el objeto de la explosión después de su tiempo de vida
         Destroy(gameObject, lifeTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Verifica si la colisión es con el jugador
+        // CASO 1: Matar al Player
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("¡El jugador ha muerto!");
-            Destroy(collision.gameObject);
+            // (Asumiendo que tu player tiene el script de vida que vimos antes)
+            collision.GetComponent<PlayerHealth>()?.TakeDamage(999);
         }
-        // NUEVA LÓGICA: Verifica si la colisión es con una bomba
+        // CASO 2: Matar a los Mobs
+        else if (collision.CompareTag("Mobs"))
+        {
+            Debug.Log("Â¡Un mob ha sido eliminado!");
+
+            // ðŸ‘‡ AGREGAR ESTO: Dar XP por Kill
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                var stats = player.GetComponent<PlayerStats>();
+                if (stats != null) stats.AddXP(stats.xpPerKill);
+            }
+
+            collision.GetComponent<EnemyHealth>()?.TakeDamage(999);
+
+        }
+        // CASO 3 (NUEVO): Derretir Muro de Hielo
+        else if (collision.CompareTag("IceWall"))
+        {
+            Debug.Log("Â¡Muro de hielo derretido!");
+            // Destruimos el objeto del muro de hielo
+            Destroy(collision.gameObject);
+
+            // Opcional: Si tu script IceWall tenÃ­a algo importante al morir (sonido, partÃ­culas),
+            // en vez de Destroy(collision.gameObject), podrÃ­as llamar a una funciÃ³n pÃºblica en Ã©l:
+            // collision.GetComponent<IceWall>()?.Melt(); 
+            // Pero por ahora, el Destroy directo sirve.
+        }
+        // CASO 4: ReacciÃ³n en cadena con otras bombas
         else if (collision.CompareTag("Bomb"))
         {
-            // Esta línea de Debug.Log te dirá si la explosión tocó una bomba
-            Debug.Log("¡Explosión tocó una bomba! Detonando...");
-
-            // Intenta obtener el componente Bomb.cs del objeto colisionado
             Bomb bomb = collision.GetComponent<Bomb>();
-
-            // Si tiene el componente y no ha explotado, hazla explotar
             if (bomb != null)
             {
                 bomb.Explode();

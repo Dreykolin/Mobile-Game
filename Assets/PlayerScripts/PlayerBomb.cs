@@ -16,15 +16,12 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwn
     [Header("UI")]
     public BombCounterUI bombCounterUI;
 
-    // input
     private PlayerControls controls;
 
-    // colisiones bomba-propia
     private Collider2D lastBombCollider;
     private bool stillOnLastBomb = false;
     private Collider2D playerCollider;
 
-    // movimiento (para lógica de celda previa + dir)
     private PlayerInputExample playerInput;
     private Vector2Int lastCardinalDir = Vector2Int.down;
     private Vector3Int lastCell;
@@ -48,15 +45,13 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwn
 
     void Start()
     {
-        // Inicializa celdas
         if (gridTilemap != null)
         {
             lastCell = gridTilemap.WorldToCell(transform.position);
             prevCell = lastCell;
         }
 
-        // <-- NUEVA LÍNEA -->
-        // Le dice al contador de UI cuántas bombas tienes al empezar.
+     
         if (bombCounterUI != null)
         {
             bombCounterUI.Setup(maxBombs);
@@ -66,7 +61,6 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwn
     void OnEnable() => controls.player.Enable();
     void OnDisable() => controls.player.Disable();
 
-    // ————— INPUT —————
     public void OnFight(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -85,17 +79,14 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwn
         }
     }
 
-    // ————— LOOP —————
     public void SetMaxBombs(int n)
     {
-        maxBombs = Mathf.Max(1, n);  // nunca menos de 1
-        // opcional: reajustar currentBombs si quieres
+        maxBombs = Mathf.Max(1, n);
         if (bombsAvailable > maxBombs)
             bombsAvailable = maxBombs;
     }
     void Update()
     {
-        // Track de celda actual y previa
         if (gridTilemap != null)
         {
             var currentCell = gridTilemap.WorldToCell(transform.position);
@@ -105,8 +96,10 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwn
                 lastCell = currentCell;
             }
         }
-
-        // Liberar colisión con la última bomba propia cuando ya te alejaste
+       /*El jugador pueda salir de su propia bomba recién puesta,Y una vez que se aleje, vuelva a colisionar solo con esa bomba.
+         * 
+         * 
+         */
         if (stillOnLastBomb && lastBombCollider != null)
         {
             float distance = Vector2.Distance(transform.position, lastBombCollider.transform.position);
@@ -118,11 +111,9 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwn
             }
         }
 
-        // Ignorar bombas bajo el jugador mientras estés encima
         CheckAndIgnoreBombsUnderPlayer();
     }
 
-    // ————— CORE —————
     private void PlaceBomb()
     {
         if (bombsAvailable <= 0) return;
@@ -159,18 +150,16 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwn
 
         bombsAvailable--;
 
-        // Set owner
         Bomb b = bombObj.GetComponent<Bomb>();
         if (b != null) b.SetOwner(this);
 
-        // <-- NUEVA LÍNEA -->
-        // Avisa a la UI que pusiste una bomba.
+
         if (bombCounterUI != null)
         {
             bombCounterUI.BombPlaced();
         }
     }
-
+    /* revisa todas las bombas que estén bajo el jugador, usado porque un eenmigo puede poner una bomba sobre tí y sin esto estarías atascado */
     void CheckAndIgnoreBombsUnderPlayer()
     {
         Vector2 pos = transform.position;
@@ -181,7 +170,6 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwn
                 Physics2D.IgnoreCollision(playerCollider, bombCollider, true);
     }
 
-    // ————— IBombOwner —————
     public void NotifyBombDestroyed(Collider2D bombCollider)
     {
         if (lastBombCollider == bombCollider && playerCollider != null)
@@ -192,13 +180,12 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwn
 
         bombsAvailable = Mathf.Min(bombsAvailable + 1, maxBombs);
 
-        // <-- NUEVA LÍNEA -->
-        // Avisa a la UI que una bomba explotó y se liberó una bomba.
+     
         if (bombCounterUI != null)
         {
             bombCounterUI.BombRemoved();
         }
-    }
+    } /* OCUPAMOS IBOMBOWNER*/
 
     public bool EsUltimaBomba(Collider2D col)
     {
@@ -219,7 +206,6 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwn
         }
         PlaceBomb();
     }
-    // Función pública para que otros scripts obtengan una posición válida en la grilla
     public Vector3 GetGridPosition(PlayerInputExample playerInput)
     {
         if (gridTilemap != null)
@@ -233,7 +219,6 @@ public class PlayerBomb : MonoBehaviour, PlayerControls.IPlayerActions, IBombOwn
         }
         else
         {
-            // Fallback sin Tilemap
             Vector3 p = transform.position;
             return new Vector3(Mathf.Floor(p.x) + 0.5f, Mathf.Floor(p.y) + 0.5f, 0);
         }

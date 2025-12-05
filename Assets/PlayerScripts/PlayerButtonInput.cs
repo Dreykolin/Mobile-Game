@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class PlayerButtonInput : MonoBehaviour
 {
-    public PlayerInputExample playerController; // Referencia a tu script principal
+    public PlayerInputExample playerController; 
 
-    // Se llama cuando presionas el botón (mantener pulsado)
     public void MoveLeftButtonDown()
     {
         playerController.MoveLeft();
     }
 
-    // Se llama cuando sueltas el botón
     public void MoveLeftButtonUp()
     {
         playerController.StopMove();
@@ -23,7 +21,6 @@ public class PlayerButtonInput : MonoBehaviour
         playerController.MoveRight();
     }
 
-    // Se llama cuando sueltas el botón
     public void MoveRightButtonUp()
     {
         playerController.StopMove();
@@ -36,7 +33,6 @@ public class PlayerButtonInput : MonoBehaviour
         playerController.MoveUp();
     }
 
-    // Se llama cuando sueltas el botón
     public void MoveUpButtonUp()
     {
         playerController.StopMove();
@@ -49,7 +45,6 @@ public class PlayerButtonInput : MonoBehaviour
         playerController.MoveDown();
     }
 
-    // Se llama cuando sueltas el botón
     public void MoveDownButtonUp()
     {
         playerController.StopMove();

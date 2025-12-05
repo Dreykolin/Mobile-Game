@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class Bomb : MonoBehaviour
@@ -23,18 +23,25 @@ public class Bomb : MonoBehaviour
     private Tilemap destructibleTilemap;
     private Tilemap wallTilemap;
 
-    // Referencia al due�o de la bomba
     private IBombOwner owner;
 
+    [Header("Audio")]
+    public AudioClip explosionClip;        // Sonido al explotar
+    public AudioClip placeBombClip;        // 🔊 Sonido al colocar la bomba
 
     void Start()
     {
         destructibleTilemap = GameObject.Find("Tilemap_destructible").GetComponent<Tilemap>();
         wallTilemap = GameObject.Find("Tilemap_blocks").GetComponent<Tilemap>();
 
+        // 🔊 Reproducir sonido al colocar la bomba
+        if (placeBombClip != null)
+        {
+            AudioSource.PlayClipAtPoint(placeBombClip, transform.position, 1f);
+        }
+
         Invoke(nameof(Explode), fuseTime);
     }
-
 
     public void SetOwner(IBombOwner ownerScript)
     {
@@ -46,6 +53,12 @@ public class Bomb : MonoBehaviour
         if (exploded) return;
         exploded = true;
 
+        // Sonido principal de la bomba
+        if (explosionClip != null)
+        {
+            AudioSource.PlayClipAtPoint(explosionClip, transform.position, 1f);
+        }
+
         Vector3 pos = transform.position;
         Instantiate(explosionCenterPrefab, pos, Quaternion.identity);
 
@@ -54,11 +67,13 @@ public class Bomb : MonoBehaviour
         PropagateFire(Vector3.left, pos, explosionLeftPrefab, explosionLeftFinalPrefab);
         PropagateFire(Vector3.right, pos, explosionRightPrefab, explosionRightFinalPrefab);
 
-        // Avisar al due�o (cualquier script que implemente IBombOwner)
         owner?.NotifyBombDestroyed(GetComponent<Collider2D>());
 
         Destroy(gameObject);
     }
+
+    [Header("Detector de Obstáculos")]
+    public LayerMask obstacleLayer;
 
     void PropagateFire(Vector3 direction, Vector3 startPos, GameObject explosionPrefab, GameObject explosionFinalPrefab)
     {
@@ -66,24 +81,39 @@ public class Bomb : MonoBehaviour
         {
             Vector3 newPos = startPos + direction * i;
             Vector3Int cellPosition = destructibleTilemap.WorldToCell(newPos);
+            Vector3 worldPosCentered = destructibleTilemap.CellToWorld(cellPosition) + new Vector3(0.5f, 0.5f, 0);
 
             if (wallTilemap.HasTile(cellPosition))
             {
-                break; // muro indestructible
+                break;
             }
             else if (destructibleTilemap.HasTile(cellPosition))
             {
                 destructibleTilemap.SetTile(cellPosition, null);
-                Instantiate(explosionFinalPrefab, destructibleTilemap.CellToWorld(cellPosition) + new Vector3(0.5f, 0.5f, 0), Quaternion.identity);
+
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                if (player != null)
+                {
+                    var stats = player.GetComponent<PlayerStats>();
+                    if (stats != null) stats.AddXP(stats.xpPerBlock);
+                }
+
+                Instantiate(explosionFinalPrefab, worldPosCentered, Quaternion.identity);
                 break;
             }
-            else
+
+            Collider2D hitObject = Physics2D.OverlapCircle(worldPosCentered, 0.4f, obstacleLayer);
+
+            if (hitObject != null && hitObject.CompareTag("IceWall"))
             {
-                if (i == explosionRange)
-                    Instantiate(explosionFinalPrefab, destructibleTilemap.CellToWorld(cellPosition) + new Vector3(0.5f, 0.5f, 0), Quaternion.identity);
-                else
-                    Instantiate(explosionPrefab, destructibleTilemap.CellToWorld(cellPosition) + new Vector3(0.5f, 0.5f, 0), Quaternion.identity);
+                Instantiate(explosionFinalPrefab, worldPosCentered, Quaternion.identity);
+                break;
             }
+
+            if (i == explosionRange)
+                Instantiate(explosionFinalPrefab, worldPosCentered, Quaternion.identity);
+            else
+                Instantiate(explosionPrefab, worldPosCentered, Quaternion.identity);
         }
     }
 }

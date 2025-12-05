@@ -1,0 +1,811 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\winMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameManager\\winMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\Timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameManager\\Timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameManager\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\recordManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameManager\\recordManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\wavv2\\musicOverride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\wavv2\\musicOverride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameManager\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\BotHeal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\BotHeal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\FireBall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Objects\\scripts\\FireBall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerControllerBot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\PlayerControllerBot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\wavv2\\SmartMusicManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\wavv2\\SmartMusicManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\wavv2\\globalmusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\wavv2\\globalmusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerControls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\PlayerControls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\Experience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\Experience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\DigEscape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\DigEscape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Objects\\scripts\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\die.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\die.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerBomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\PlayerBomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\Explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Objects\\scripts\\Explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\LevelUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameManager\\LevelUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerFireBall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\PlayerFireBall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\IceHeroPower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\IceHeroPower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\PlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\IceWall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Objects\\scripts\\IceWall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\CameraTeleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameManager\\CameraTeleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\FireballCooldown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameManager\\FireballCooldown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\WallCooldown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameManager\\WallCooldown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\CharacterSelectScripts\\CharSelectUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\CharacterSelectScripts\\CharSelectUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\CharacterSelectScripts\\CharacterSelectorUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\CharacterSelectScripts\\CharacterSelectorUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\PlayerManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\MenuScripts\\MenuScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\MenuScripts\\MenuScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\Downloads\\XD.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\CameraSnap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameManager\\CameraSnap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\Joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\Joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\CameraScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Objects\\scripts\\CameraScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\PauseScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Objects\\scripts\\PauseScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\IBombOwner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\IBombOwner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerButtonInput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\PlayerButtonInput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\PlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\CameraSnap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameManager\\CameraSnap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\IceWall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Objects\\scripts\\IceWall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\Downloads\\XD.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\IceHeroPower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\IceHeroPower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\CharacterSelectScripts\\CharacterSelectorUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\CharacterSelectScripts\\CharacterSelectorUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\Explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Objects\\scripts\\Explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\die.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerScripts\\die.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\FireBall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Objects\\scripts\\FireBall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\wavv2\\globalmusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\wavv2\\globalmusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\RestartButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Objects\\scripts\\RestartButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\RestartButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Objects\\scripts\\RestartButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Joystick.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\Joystick.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\Joystick.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\Joystick.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\Joystick.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T00:08:40.486Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CameraScript.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\CameraScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\CameraScript.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\CameraScript.cs",
+              "RelativeToolTip": "Assets\\Objects\\scripts\\CameraScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T23:02:17.311Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "PlayerManager.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerManager.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerManager.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerManager.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\PlayerManager.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T05:28:23.813Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "musicOverride.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\wavv2\\musicOverride.cs",
+              "RelativeDocumentMoniker": "Assets\\wavv2\\musicOverride.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\wavv2\\musicOverride.cs",
+              "RelativeToolTip": "Assets\\wavv2\\musicOverride.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T01:35:30.6Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "recordManager.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\recordManager.cs",
+              "RelativeDocumentMoniker": "Assets\\GameManager\\recordManager.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\recordManager.cs",
+              "RelativeToolTip": "Assets\\GameManager\\recordManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:56:45.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "record.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\record.cs",
+              "RelativeDocumentMoniker": "Assets\\GameManager\\record.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\record.cs",
+              "RelativeToolTip": "Assets\\GameManager\\record.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:56:14.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "winMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\winMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\GameManager\\winMenu.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\winMenu.cs",
+              "RelativeToolTip": "Assets\\GameManager\\winMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:51:40.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Timer.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\Timer.cs",
+              "RelativeDocumentMoniker": "Assets\\GameManager\\Timer.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\Timer.cs",
+              "RelativeToolTip": "Assets\\GameManager\\Timer.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAF8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:38:42.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "enemymanager.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\enemymanager.cs",
+              "RelativeDocumentMoniker": "Assets\\GameManager\\enemymanager.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\enemymanager.cs",
+              "RelativeToolTip": "Assets\\GameManager\\enemymanager.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAjwCEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:36:45.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FireBall.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\FireBall.cs",
+              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\FireBall.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\FireBall.cs",
+              "RelativeToolTip": "Assets\\Objects\\scripts\\FireBall.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T04:01:03.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BotHeal.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\BotHeal.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\BotHeal.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\BotHeal.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\BotHeal.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T00:23:36.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlayerControllerBot.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerControllerBot.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerControllerBot.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerControllerBot.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\PlayerControllerBot.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T00:02:39.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SmartMusicManager.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\wavv2\\SmartMusicManager.cs",
+              "RelativeDocumentMoniker": "Assets\\wavv2\\SmartMusicManager.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\wavv2\\SmartMusicManager.cs",
+              "RelativeToolTip": "Assets\\wavv2\\SmartMusicManager.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAwHYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T04:07:40.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "globalmusic.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\wavv2\\globalmusic.cs",
+              "RelativeDocumentMoniker": "Assets\\wavv2\\globalmusic.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\wavv2\\globalmusic.cs",
+              "RelativeToolTip": "Assets\\wavv2\\globalmusic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T04:04:08.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PlayerControls.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerControls.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerControls.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerControls.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\PlayerControls.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T03:43:10.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "globalmusic.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\wavv2\\globalmusic.cs",
+              "RelativeDocumentMoniker": "Assets\\wavv2\\globalmusic.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\wavv2\\globalmusic.cs",
+              "RelativeToolTip": "Assets\\wavv2\\globalmusic.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAwEYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T01:26:26.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DigEscape.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\DigEscape.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\DigEscape.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\DigEscape.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\DigEscape.cs",
+              "ViewState": "AgIAAAABAAAAAAAAAAAAwAoBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T00:51:09.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Experience.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\Experience.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\Experience.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\Experience.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\Experience.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAwGwAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T18:54:31.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "die.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\die.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\die.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\die.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\die.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T03:25:39.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PlayerBomb.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerBomb.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerBomb.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerBomb.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\PlayerBomb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T00:10:52.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "bomb.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\bomb.cs",
+              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\bomb.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\bomb.cs",
+              "RelativeToolTip": "Assets\\Objects\\scripts\\bomb.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAwGgAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T23:02:10.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Explosion.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\Explosion.cs",
+              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\Explosion.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\Explosion.cs",
+              "RelativeToolTip": "Assets\\Objects\\scripts\\Explosion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T17:50:30.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PlayerFireBall.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerFireBall.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerFireBall.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerFireBall.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\PlayerFireBall.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T03:59:01.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LevelUI.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\LevelUI.cs",
+              "RelativeDocumentMoniker": "Assets\\GameManager\\LevelUI.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\LevelUI.cs",
+              "RelativeToolTip": "Assets\\GameManager\\LevelUI.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAABgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T18:59:51.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IceHeroPower.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\IceHeroPower.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\IceHeroPower.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\IceHeroPower.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\IceHeroPower.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T05:22:20.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\PlayerController.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAB0AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T00:03:34.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IceWall.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\IceWall.cs",
+              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\IceWall.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\IceWall.cs",
+              "RelativeToolTip": "Assets\\Objects\\scripts\\IceWall.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T23:53:08.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "die.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\die.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\die.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\die.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\die.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAowCcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T00:00:11.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CameraTeleport.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\CameraTeleport.cs",
+              "RelativeDocumentMoniker": "Assets\\GameManager\\CameraTeleport.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\CameraTeleport.cs",
+              "RelativeToolTip": "Assets\\GameManager\\CameraTeleport.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T02:57:04.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "WallCooldown.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\WallCooldown.cs",
+              "RelativeDocumentMoniker": "Assets\\GameManager\\WallCooldown.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\WallCooldown.cs",
+              "RelativeToolTip": "Assets\\GameManager\\WallCooldown.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T05:25:43.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FireballCooldown.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\FireballCooldown.cs",
+              "RelativeDocumentMoniker": "Assets\\GameManager\\FireballCooldown.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\FireballCooldown.cs",
+              "RelativeToolTip": "Assets\\GameManager\\FireballCooldown.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T05:30:46.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CharSelectUI.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\CharacterSelectScripts\\CharSelectUI.cs",
+              "RelativeDocumentMoniker": "Assets\\CharacterSelectScripts\\CharSelectUI.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\CharacterSelectScripts\\CharSelectUI.cs",
+              "RelativeToolTip": "Assets\\CharacterSelectScripts\\CharSelectUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T05:18:11.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CharacterSelectorUI.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\CharacterSelectScripts\\CharacterSelectorUI.cs",
+              "RelativeDocumentMoniker": "Assets\\CharacterSelectScripts\\CharacterSelectorUI.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\CharacterSelectScripts\\CharacterSelectorUI.cs",
+              "RelativeToolTip": "Assets\\CharacterSelectScripts\\CharacterSelectorUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T05:09:31.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Explosion.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\Explosion.cs",
+              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\Explosion.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\Explosion.cs",
+              "RelativeToolTip": "Assets\\Objects\\scripts\\Explosion.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T23:02:19.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "CharacterSelectorUI.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\CharacterSelectScripts\\CharacterSelectorUI.cs",
+              "RelativeDocumentMoniker": "Assets\\CharacterSelectScripts\\CharacterSelectorUI.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\CharacterSelectScripts\\CharacterSelectorUI.cs",
+              "RelativeToolTip": "Assets\\CharacterSelectScripts\\CharacterSelectorUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T05:53:32.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "PauseScript.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\PauseScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\PauseScript.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\PauseScript.cs",
+              "RelativeToolTip": "Assets\\Objects\\scripts\\PauseScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T23:02:21.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "MenuScript.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\MenuScripts\\MenuScript.cs",
+              "RelativeDocumentMoniker": "Assets\\MenuScripts\\MenuScript.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\MenuScripts\\MenuScript.cs",
+              "RelativeToolTip": "Assets\\MenuScripts\\MenuScript.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T05:59:13.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "IceWall.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\IceWall.cs",
+              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\IceWall.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\IceWall.cs",
+              "RelativeToolTip": "Assets\\Objects\\scripts\\IceWall.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T23:02:20.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "XD.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\Downloads\\XD.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\XD.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\Downloads\\XD.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\XD.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T23:53:28.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CameraSnap.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\CameraSnap.cs",
+              "RelativeDocumentMoniker": "Assets\\GameManager\\CameraSnap.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\CameraSnap.cs",
+              "RelativeToolTip": "Assets\\GameManager\\CameraSnap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T00:42:49.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "RestartButton.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\RestartButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\RestartButton.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\RestartButton.cs",
+              "RelativeToolTip": "Assets\\Objects\\scripts\\RestartButton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T23:02:23.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "PlayerButtonInput.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerButtonInput.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerButtonInput.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerButtonInput.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\PlayerButtonInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T00:04:50.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IBombOwner.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\IBombOwner.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\IBombOwner.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\IBombOwner.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\IBombOwner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T00:14:28.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\PlayerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T00:25:12.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "CameraSnap.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\CameraSnap.cs",
+              "RelativeDocumentMoniker": "Assets\\GameManager\\CameraSnap.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\GameManager\\CameraSnap.cs",
+              "RelativeToolTip": "Assets\\GameManager\\CameraSnap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T01:20:35.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "XD.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\Downloads\\XD.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\XD.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\Downloads\\XD.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\XD.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T05:14:07.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IceHeroPower.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\IceHeroPower.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScripts\\IceHeroPower.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\PlayerScripts\\IceHeroPower.cs",
+              "RelativeToolTip": "Assets\\PlayerScripts\\IceHeroPower.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T03:55:34.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "FireBall.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\FireBall.cs",
+              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\FireBall.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\FireBall.cs",
+              "RelativeToolTip": "Assets\\Objects\\scripts\\FireBall.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T03:31:58.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "RestartButton.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\RestartButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\RestartButton.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\OneDrive\\Documentos\\Unity\\Mobile-Game\\Assets\\Objects\\scripts\\RestartButton.cs",
+              "RelativeToolTip": "Assets\\Objects\\scripts\\RestartButton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:33:31.806Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

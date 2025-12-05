@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Dreyk\\Mobile-Game\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\objects\\scripts\\camerascript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\objects\\scripts\\camerascript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\gamemanager\\camerasnap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemanager\\camerasnap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\menuscripts\\deathmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\menuscripts\\deathmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|c:\\users\\dreyk\\mobile-game\\assets\\gamemanager\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|C:\\Users\\Dreyk\\Mobile-Game\\assets\\gamemanager\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66153DA3-607E-BB0C-4107-6A53658BF478}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemanager\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -70,24 +78,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CameraScript.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Objects\\scripts\\CameraScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\CameraScript.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Objects\\scripts\\CameraScript.cs",
+              "RelativeToolTip": "Assets\\Objects\\scripts\\CameraScript.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwCAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T01:14:03.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CameraSnap.cs",
+              "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\GameManager\\CameraSnap.cs",
+              "RelativeDocumentMoniker": "Assets\\GameManager\\CameraSnap.cs",
+              "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\GameManager\\CameraSnap.cs",
+              "RelativeToolTip": "Assets\\GameManager\\CameraSnap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:20:15.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Timer.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\GameManager\\Timer.cs",
               "RelativeDocumentMoniker": "Assets\\GameManager\\Timer.cs",
               "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\GameManager\\Timer.cs",
               "RelativeToolTip": "Assets\\GameManager\\Timer.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAA3wDIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T00:57:10.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T00:57:10.405Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "PauseScript.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Objects\\scripts\\PauseScript.cs",
               "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\PauseScript.cs",
@@ -99,20 +131,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "deathMenu.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\MenuScripts\\deathMenu.cs",
               "RelativeDocumentMoniker": "Assets\\MenuScripts\\deathMenu.cs",
               "ToolTip": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\MenuScripts\\deathMenu.cs",
               "RelativeToolTip": "Assets\\MenuScripts\\deathMenu.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwCMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T00:27:37.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T00:27:37.717Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "die.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\die.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerScripts\\die.cs",
@@ -124,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "MenuScript.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\MenuScripts\\MenuScript.cs",
               "RelativeDocumentMoniker": "Assets\\MenuScripts\\MenuScript.cs",
@@ -136,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "bomb.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\Objects\\scripts\\bomb.cs",
               "RelativeDocumentMoniker": "Assets\\Objects\\scripts\\bomb.cs",
@@ -148,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "IceHeroPower.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\IceHeroPower.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerScripts\\IceHeroPower.cs",
@@ -160,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerController.cs",
@@ -172,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "DigEscape.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\DigEscape.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerScripts\\DigEscape.cs",
@@ -184,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "PlayerBomb.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\PlayerScripts\\PlayerBomb.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerScripts\\PlayerBomb.cs",
@@ -196,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "PlayerCharacterApplier.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\CharacterSelectScripts\\PlayerCharacterApplier.cs",
               "RelativeDocumentMoniker": "Assets\\CharacterSelectScripts\\PlayerCharacterApplier.cs",
@@ -208,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "PlayerSpawner.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\CharacterSelectScripts\\PlayerSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\CharacterSelectScripts\\PlayerSpawner.cs",
@@ -220,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "CharacterData.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\CharacterSelectScripts\\CharacterData.cs",
               "RelativeDocumentMoniker": "Assets\\CharacterSelectScripts\\CharacterData.cs",
@@ -232,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "CharacterSelectorUI.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\CharacterSelectScripts\\CharacterSelectorUI.cs",
               "RelativeDocumentMoniker": "Assets\\CharacterSelectScripts\\CharacterSelectorUI.cs",
@@ -244,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\Dreyk\\Mobile-Game\\Assets\\CharacterSelectScripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\CharacterSelectScripts\\GameManager.cs",

@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 758261245
   m_SortingLayer: 5
   m_SortingOrder: 10
-  m_Sprite: {fileID: -1071475958, guid: 26c782820d50feb40a6e24e95fe6a0d8, type: 3}
+  m_Sprite: {fileID: -1048795606, guid: 9b2069cabf76ea5498d38d80e0fa01f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -236,3 +236,17 @@ MonoBehaviour:
   - destructible
   - IceWall
   - Bomb
+  subterraneanLayerName: Subterranean
+  tunnelThroughEverything: 1
+  requireFreeDestination: 1
+  digMaxUses: 2
+  digUsesLeft: 0
+  digButton: {fileID: 0}
+  disabledAlpha: 0.35
+  selectablesToDisable: []
+  scriptsToDisable: []
+  objectsToDisable: []
+  arrivalMarkerPrefab: {fileID: 0}
+  arrivalHoldSeconds: 0.75
+  hudGroup: {fileID: 0}
+  lockedAlpha: 0.6

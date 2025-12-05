@@ -5,17 +5,15 @@ using TMPro;
 public class CooldownWheelUI : MonoBehaviour
 {
     [Header("Refs")]
-    public Image pieChartImage;           // Image con Fill Method = Radial 360
-    public TextMeshProUGUI secondsText;   // opcional (puede ser null)
+    public Image pieChartImage;           
+    public TextMeshProUGUI secondsText;   
 
-    // estado interno
-    private float duration;       // segundos totales del cooldown
-    private float remaining;      // segundos restantes
-    private bool running;         // ¿está en cooldown?
+    private float duration;       
+    private float remaining;     
+    private bool running;        
 
-    public System.Action OnFinished; // callback opcional al terminar
+    public System.Action OnFinished; 
 
-    /// <summary>Comienza el cooldown visual por 'durationSec' segundos.</summary>
     public void Begin(float durationSec)
     {
         duration = Mathf.Max(0.0001f, durationSec);
@@ -24,7 +22,6 @@ public class CooldownWheelUI : MonoBehaviour
         UpdateUI();
     }
 
-    /// <summary>Fuerza a estado 'listo' (sin cooldown visual).</summary>
     public void SetReady()
     {
         running = false;
@@ -52,8 +49,7 @@ public class CooldownWheelUI : MonoBehaviour
 
     private void UpdateUI()
     {
-        // Queremos que mientras está en cooldown, el "tapado" radial muestre lo que FALTA.
-        // Ej: al empezar: remaining=duration => fill=1; al terminar: remaining=0 => fill=0.
+ 
         if (pieChartImage != null)
         {
             float fill = (duration > 0f) ? (remaining / duration) : 0f;
@@ -64,7 +60,7 @@ public class CooldownWheelUI : MonoBehaviour
         {
             secondsText.text = (running && remaining > 0.01f)
                 ? Mathf.CeilToInt(remaining).ToString()
-                : ""; // vacío cuando está listo
+                : ""; 
         }
     }
 }

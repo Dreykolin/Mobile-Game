@@ -1,9 +1,13 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class IceWall : MonoBehaviour
 {
     [Header("Tiempo de vida")]
-    public float lifeTime = 5f; // se destruye después de 5 segundos
+    public float lifeTime = 5f;
+
+    // ðŸ‘‡ AÃ‘ADIDO: Clip de audio para el momento de la generaciÃ³n
+    [Header("Audio")]
+    public AudioClip spawnSound;
 
     private IWallOwner owner;
 
@@ -11,11 +15,17 @@ public class IceWall : MonoBehaviour
 
     void Start()
     {
-        // Programa la destrucción automática
+        // ðŸ’¡ DISPARAR EL SONIDO DE GENERACIÃ“N
+        if (spawnSound != null)
+        {
+            // Reproduce el clip en la posiciÃ³n de la pared.
+            // Crea un AudioSource temporal que se autodestruye.
+            AudioSource.PlayClipAtPoint(spawnSound, transform.position);
+        }
+
         Invoke(nameof(DestroyWall), lifeTime);
     }
 
-    // Permite que el dueño (IceHeroPower) registre que esta pared le pertenece
     public void SetOwner(IWallOwner ownerScript)
     {
         owner = ownerScript;
@@ -26,14 +36,9 @@ public class IceWall : MonoBehaviour
         if (destroyed) return;
         destroyed = true;
 
-        // Aquí podrías poner algún efecto visual de hielo rompiéndose
-        // por ejemplo: Instantiate(destructionEffectPrefab, transform.position, Quaternion.identity);
 
-        // Avisar al dueño que la pared se destruyó
         owner?.NotifyWallDestroyed(GetComponent<Collider2D>());
 
-        // Destruir la pared
         Destroy(gameObject);
     }
-
 }
